@@ -1,0 +1,138 @@
+﻿body 
+{
+    font-family: Arial;
+    font-size:small;
+}
+
+#dettaglionave ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+
+#dettaglionave
+{
+    
+}
+
+#dettaglionave li
+{
+    width:210px;
+	height:25px;
+	margin:0;
+	padding:0;
+	border-bottom: 1px solid #dcdcdc;
+	margin-right:28px;
+	float:left;
+}
+
+
+
+
+.Cl0, .Cl1, .Cl2, .Cl3, .Cl4, .Cl5, .Cl22, .Cl6 
+{
+	position:absolute;
+}
+
+.Cl0
+{
+	margin: 3px 0 0 5px;
+	font-weight:bold;
+	color: #067788;
+    	font-size:medium;
+}
+
+.Cl1
+{
+	margin: 5px 0 0 5px;
+	color: #067788;
+    font-size:x-small;
+    font-weight:bold;
+}
+
+.Cl2
+{
+	margin: 5px 0 0 160px;
+	text-align: right;
+	width: 50px;	
+}
+
+.Cl3
+{
+	margin:5px 0 0 280px;
+	text-align:right;
+	width:120px;
+}
+
+.Cl4
+{
+	margin: 5px 0 0 5px;
+	color: #067788;
+    font-size:small;
+    font-weight:bold;
+}
+
+.Cl5
+{
+	margin: 3px 0 0 395px;
+}
+
+.Cl22
+{
+	margin: 1px 0 0 190px;
+}
+
+.Cl6
+{
+	margin: 9px 0 0 580px;
+	color: #ffffff;
+	font-size:large;	    
+}
+
+
+
+
+
+#divimage
+{
+    position:absolute;
+    margin: 0 0 0 438px;    
+}
+
+#divnave
+{
+    width:715px; 
+    min-height:170px;
+}
+
+
+#divimagegrande
+{
+    position:absolute;
+    margin: 6px 0 0 233px;
+    width: 442px;
+    height: 333px;
+}
+
+#fotonave
+{
+    width:700px;
+}
+
+
+#fotonave ul
+{
+    margin: 0px;
+    padding:0px;
+    list-style: none;
+}
+
+#fotonave li
+{
+    width: 215px;
+    height:160px;    
+    padding:6px;   
+    float:left;
+}
+

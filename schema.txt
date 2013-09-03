@@ -1,0 +1,94 @@
+VEDISOTTO.JS
+CARICACAB
+Cabinecosta.aspx
+voli.aspx
+dal = 24/03/2013
+nomecabina = "Cabina esterna con finestra"
+tipocabina = "Classic"
+codiceperiodo = "AR0303030"
+categoria = "EC"
+persone = 2
+eta1 = 35
+eta2 = 35
+eta3 = 35
+eta4 = 35
+eta5 = 35
+cartaclub=
+volo =  0 no - 1 a/r - 3 andare  - 2 tornare
+voloobb = 0 no - 1 si
+aeroporto ="MXP"
+compagnia = 0 msc - 1 costa
+tipologiacabina = 1-2 interna 3-4 esterna  5-6 balcone    7-8 suite
+
+
+CABINECOSTA.jS
+CARICACAB
+Cabinecosta.aspx
+voli.aspx
+dal = 24/03/2013
+nomecabina = "Cabina esterna con finestra"
+tipocabina = "Classic"
+codiceperiodo = "AR0303030"
+categoria = "EC"
+persone = 2
+eta1 = 35
+eta2 = 35
+eta3 = 35
+eta4 = 35
+eta5 = 35
+cartaclub=
+volo =  0 no - 1 a/r - 3 andare  - 2 tornare
+voloobb = 0 no - 1 si
+aeroporto ="MXP"
+compagnia = 0 msc - 1 costa
+tipologiacabina = 1-2 interna 3-4 esterna  5-6 balcone    7-8 suite
+
+ASSACABINA
+preventivo.aspx
+codiceperiodo = "AR0303030"
+categoria = "EC"
+cabina = "2012"
+persone = 2
+eta1 = 35
+eta2 = 35
+eta3 = 35
+eta4 = 35
+eta5 = 35
+nomeponte = 
+volo =  0 no - 1 a/r - 3 andare  - 2 tornare
+aeroporto ="MXP"
+nomeclub=
+cartaclub=
+compagnia = 0 msc - 1 costa
+frasepac = ";1-1;2-1;11-1;"
+tipologiacabina = 1-2 interna 3-4 esterna  5-6 balcone    7-8 suite
+
+
+
+PREVENTIVO.JS
+VEDIDETTAGLIO
+dettaglio.aspx
+codiceperiodo = "AR0303030"
+totale= 2520 (serve per il dettaglio)
+persone= 2
+compagnia= 0 msc - 1 costa
+
+VEDIPACCHETTI
+pacchetti.aspx
+codiceperiodo = "AR0303030"
+categoria = "EC"
+cabina = "2012"
+persone = 2
+eta1 = 35
+eta2 = 35
+eta3 = 35
+eta4 = 35
+eta5 = 35
+nomeponte = 
+volo =  0 no - 1 a/r - 3 andare  - 2 tornare
+aeroporto ="MXP"
+nomeclub=
+cartaclub=
+compagnia = 0 msc - 1 costa
+frasepac = ";1-1;2-1;11-1;"
+

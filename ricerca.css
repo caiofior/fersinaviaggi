@@ -1,0 +1,124 @@
+﻿body 
+{
+    font-family:Arial;
+}
+
+#dispocrociere
+{
+    width: 550px;
+    font-size:small;
+}
+
+#dispocrociere ul
+{
+    list-style:none;
+    margin:0px;
+    padding: 0px;
+}
+
+#dispocrociere li
+{
+    height:20px;
+    padding: 5px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+.PP0, .PP0, .PP1, .PP2, .PP3, .PP4, .PP5, .PP6, .PP7, .R1, .R2, .R3, .R0
+{
+    position:absolute
+}
+
+.PP0
+{
+    margin:-3px;
+} 
+
+.PP1
+{
+    margin-left: 60px;
+    margin-top:5px;
+}
+
+.PP2
+{
+    margin-top:3px;
+    margin-left: 155px;
+}
+
+.PP3
+{
+    margin-top:3px;
+    margin-left: 380px;
+}
+
+.PP6
+{
+    margin-top:5px;
+    margin-left: 290px;
+}
+
+.PP4
+{
+    margin-top:3px;
+    margin-left:430px;
+}
+
+.PP5
+{
+    margin-top:3px;
+    margin-left: 480px;
+}
+
+.PP7
+{
+    margin-top:1px;
+    margin-left: 515px;
+}
+
+#scopriofferte
+{
+    position:absolute;
+    margin: 223px 0 0 20px;
+}
+
+#ricerca ul
+{
+    list-style:none;
+    padding:0px;
+    margin:0px;
+}
+
+#ricerca li
+{
+    height: 40px;
+}
+
+.R1
+{
+    margin:10px 0 0 10px;
+    font-weight: bold;
+    font-size:x-small;
+}
+
+.R2
+{
+    margin:0 0 0 75px;
+    height:30px;
+    width:170px;
+
+}
+
+.R3
+{
+    margin:0 0 0 95px;
+    height:40px;
+    width:150px;
+}
+
+.R0
+{
+    margin:0px 0 0 10px;
+    height:40px;
+    width:68px;
+    padding:2px;
+}

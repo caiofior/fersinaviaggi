@@ -1,0 +1,122 @@
+﻿body 
+{
+    font-family: Arial;
+    font-size:small;
+    -webkit-text-size-adjust: 100%;
+}
+
+#divcomprende ul, #divnoncomprende ul, #divpagamenti ul, #divdocumenti ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+
+
+#divpagamenti ul, #divdocumenti ul
+{
+    margin-top:30px;
+}
+
+#divcomprende ul, #divnoncomprende ul
+{
+    list-style: disc;
+    margin-left:20px;
+    margin-top:30px;
+}
+
+#divcomprende li, #divnoncomprende li, #divpagamenti li, #divdocumenti li
+{
+    width:580px;
+	height:22px;
+	margin:0;
+	padding:6px 0 0 0;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+#divcomprende li, #divnoncomprende li
+{
+    width: 560px;
+    padding:2px 0 0 0;
+    height:18px;
+}
+
+
+
+#layoutcosta
+{
+    width:682px;
+}
+
+
+
+#layoutcosta h1
+{
+    color:#ffffff;
+    font-size:medium;
+    margin:0 0 5px -2px;
+    background: url(../images/sfondo-verde.gif) repeat-x;
+    height: 28px;
+    padding: 10px 0 0 5px;
+    width:682px;
+    
+}
+
+
+
+.Cl1, .Cl2, .Cl3, .Cl4
+{
+	position:absolute;
+}
+
+.Cl1
+{
+	margin: 0px 0px 0px 3px;
+}
+.Cl2
+{
+	margin: 0px 0px 0px 390px;
+	text-align:center;
+	width:10px;
+}
+.Cl3
+{
+	margin: 0px 0px 0px 410px;
+	width:80px;
+	text-align: right;	
+}
+.Cl4
+{
+	margin: 0px 0px 0px 500px;
+	width:80px;
+	text-align: right;	
+}
+
+
+
+.PP1, .PP2, .PP3, .PP4
+{
+    position:absolute;
+}
+
+.PP1
+{
+    margin: 0 0 0 3px;
+}
+
+.PP2
+{
+    margin: 0 0 0 80px;
+    width:80px;
+    text-align:right;
+}
+
+.PP3
+{
+    margin: 0 0 0 200px;
+}
+
+.PP4
+{
+    margin: 0 0 0 260px;
+}

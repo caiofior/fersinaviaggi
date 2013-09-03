@@ -1,0 +1,145 @@
+﻿.Clp1, .Clp2, .Clp3, .Clp4
+{
+	position:absolute;
+}
+
+.Clp1
+{
+	margin: 0px 0px 0px 3px;
+}
+.Clp2
+{
+	margin: 0px 0px 0px 480px;
+	text-align:center;
+	width:10px;
+}
+.Clp3
+{
+	margin: 0px 0px 0px 500px;
+	width:80px;
+	text-align: right;	
+}
+.Clp4
+{
+	margin: 0px 0px 0px 590px;
+	width:80px;
+	text-align: right;	
+}
+
+#divpreventivo h1
+{
+    color:#0071BC;
+    font-size:medium;
+    margin:0 0 5px 20px;    
+    border-top: 2px solid #10AAC6;
+    border-bottom: 1px solid #10AAC6;
+    height: 28px;
+    padding: 10px 0 0 5px;
+    width:670px; 
+}
+
+#divpreventivo li
+{
+    border-bottom: 1px solid #10AAC6;
+}
+
+
+
+/* ######### CSS for Shade Tabs. Remove if not using ######### */
+
+.shadetabs{
+padding: 3px 0;
+margin-left: 0;
+margin-top: 1px;
+margin-bottom: 0;
+font: bold small arial;
+list-style-type: none;
+text-align: left; /*set to left, center, or right to align the menu as desired*/
+}
+
+.shadetabs li{
+display: inline;
+margin: 0;
+}
+
+.shadetabs li a{
+text-decoration: none;
+position: relative;
+z-index: 1;
+padding: 13px 5px;
+margin-right: 0px;
+margin-left:-2px;
+border: 1px solid #10AAC6;
+color: #0071BC;
+background: #ffffff;
+cursor:pointer;
+}
+
+.shadetabs li a:visited{
+color: #2d2b2b;
+}
+
+.shadetabs li a:hover{
+text-decoration: underline;
+color: #2d2b2b;
+}
+
+.shadetabs li a.selected{ /*selected main tab style */
+position: relative;
+top: 2px;
+}
+
+.shadetabs li a.selected{ /*selected main tab style */
+border-bottom-color: white;
+}
+
+.shadetabs li a.selected:hover{ /*selected main tab style */
+text-decoration: none;
+}
+
+
+#divapriframe
+{
+    border: 1px solid #10AAC6;
+    margin: 15px 0px 0px 7px;
+    width: 690px;border: 1px solid #10AAC6;
+}
+
+.Cl11, .Cl22, .Cl33, .Cl44
+{	
+	position:absolute;
+	font-size:medium;
+	font-weight:bold;
+}
+
+.Cl22
+{
+    margin:7px 0 0 180px;    
+    color: #1E7177;
+}
+
+.Cl44
+{
+    margin:7px 0 0 235px;   
+}
+
+.Cl11
+{
+    margin:7px 0 0 0;
+    color: #1E7177;
+}
+
+.Cl33
+{
+    margin:7px 0 0 150px;
+}
+
+
+#dettagliodiv li
+{
+	width:500px;
+	height:30px;
+	margin:0;
+	padding:0 0 0 0;
+    border-bottom: 1px solid #9AD7FF;
+}

@@ -1,0 +1,43 @@
+﻿body
+{
+    font-family:Arial, Times New Roman;
+}
+
+#dettagliodoc li
+{
+	width:380px;
+	height:30px;
+	margin:0;
+	padding:0;
+}
+
+#dettagliodoc li
+{
+    font-size:small;    
+    width:500px;
+    border-bottom:1px solid #dcdcdc;
+    padding: 3px 0 3px 0;
+    height:20px;
+}
+
+#dettagliodoc ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+
+#dettagliodoc
+{
+    text-align:justify;
+}
+
+#cc
+{
+    position:absolute;
+    width:147px;
+    height:161px;
+     margin: 0 0 0 540px
+}
+
+

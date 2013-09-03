@@ -1,0 +1,359 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>#title#</title>
+    <link rel="stylesheet" href="crociere.css?id=4" type="text/css" />
+    <link rel="stylesheet" href="../fersina.css" type="text/css" />
+     <link rel="stylesheet" href="nave.css" type="text/css" />
+     <meta name="Keywords" content="#keyword#" />		
+    <meta name="Description" content="#description#" />
+    <meta http-equiv="Content-Language" content="it" />
+    <script type="text/javascript" src="pax.js"></script>
+	<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+	<meta content="global" name="distribution" />
+	<meta content="IT" name="country" />
+    <script language="javascript" type="text/javascript">
+        function cambiafoto(nomefoto) {
+            document.getElementById("fotog").src = nomefoto;
+        }
+        function caricaiti(idnave, nomediv) {
+            divattesa = '"caricaitinave"';
+            document.getElementById(nomediv).innerHTML = "<div id=" + divattesa + " style='position:absolute; margin:2px; text-align:center; width:250px; height:326px;'><img src='../images/loading.gif' style='float:none;' alt='caricamento in corso' /></div><iframe id='frameitinave' height='1055' width='250'  onload='ffiframe(" + divattesa + ")' style='border:none; margin-top:10px;' frameborder='0' scrolling='no' src='navedove.aspx?id=" + idnave + "'></iframe>";
+        }
+        function ffiframe(elem) {
+            document.getElementById(elem).style.visibility = "hidden";
+            document.getElementById(elem).style.height = "0px";
+            document.getElementById("layoutnascondi").style.visibility = "hidden";
+        }
+        function scrollFrame(frame, amount) {
+            parent.frames[frame].scrollBy(0, amount);
+        }
+
+    </script>
+    <style type="text/css">
+        #descricabine{width:590px;}
+        #descricabine ul{margin:0;padding:0;list-style:none;}
+        #descricabine li{height:auto;width:690px;margin:0;padding:5px 0 5px 0;border-bottom: 1px solid #dcdcdc;text-align:justify;}
+        #datipax{margin: -2498px 0 0 266px;}
+        #naveiti{margin-top:20px; width: 263px; height:1140px;  border: 1px solid #17ABC1;  padding:6px 0 0 2px;}
+        .Cldd1{float:left;margin: 2px 6px 0 0px;}
+        .Cldd2{position:absolute;margin: 3px 0 0 550px;}
+    </style>
+        <!--[if lt IE 9]> 
+        <style type="text/css"> 
+            #ricerca{margin:-352px 0 0 0px; position:absolute; height:292px;}
+            #barra{margin-top:-62px;}
+            #contenuto{margin-top:-63px;}
+        </style> 
+        <![endif]-->
+        <!--[if lt IE 8]> 
+        <style type="text/css">
+            #contenuto{margin-top:-83px;}
+            #dentrop, #dentrop2{margin-left:-730px;}
+        </style> 
+        <![endif]-->
+        
+</head>
+<body>
+    <!--<div id="layoutnascondi" style="" ></div>-->
+    <div id="bordino"></div>
+    <div id="layout">        
+        <div id="logo">
+            <div id="award"><img src="../images/msc-award.gif" alt="Vincitore 2 volte consecutive Msc award anno 2011 e anno 2012"  /></div>
+            <div id="tel"><img src="../images/tel.gif" alt="chiamaci al numero 0461 914471" /></div>
+            
+            <img src="../images/fersinaviaggi.gif" alt="fersinaviaggi.it" />
+        </div>
+        <div id="contesto">
+            <div id="menu">
+                <ul>
+                    <li><a href="../index.html" title="Home page Fersina Viaggi">Home</a></li>
+                    <li><a href="../crociere/crociere.aspx" title="Crociere">Tutte le Crociere</a></li>                    
+                    <li><a href="../crociere/crociere.aspx?promo=1" title="Offerte Costa Crociere">Offerte Costa Crociere</a></li> 
+                    <li><a href="../crociere/crociere.aspx?promo=2" title="Offerte Msc Crociere">Offerte Msc Crociere</a></li>
+               </ul>
+            </div>            
+        </div>
+        <div id="contenutocrociera">
+            <form id="form1" runat="server"> 
+                <div id="linkcroce"><a href="crociere.aspx">Torna alla pagina delle crociere</a></div>
+                <div id="barraalta">
+                    <div id="barraprezzo">
+
+                    </div>
+                    <div id="barratitolo">
+                        #titolo#
+                    </div>
+                </div>
+                <div id="s1">
+                    <div id="fotoiti">
+                        <img src="#imgco#" alt="" title=""  runat="server" /><br />
+                        <img src="#imgna#" alt="#titolo#" title="#titolo#" style="width:205px"  runat="server" /><br /><br />                        
+                        <div id="testoiti">
+                            #titolo#<br />
+                            
+                        </div>
+                    </div>
+                </div>
+                <div id="s3">
+                    <div id="domande">
+                        <img src="#distributore#" style="cursor:default" alt="#ldist#"  />
+                    </div>
+                </div>
+                <div id="s2">
+                    <div id="premio">
+                        <img src="../images/miglior-web.jpg" alt="premiata miglior agenzia web msc crociere" />
+                    </div>
+                </div>
+                <div id="s4">
+                    <div id="facebook">
+                        <div id="facebookmargin">
+                            <iframe src="http://www.facebook.com/plugins/likebox.php?id=202899166418298&amp;width=235&amp;connections=8&amp;stream=false&amp;header=false&amp;height=247" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:265px; height:247px; left:-5px; overflow:hidden; position:relative; top:-1px;" allowTransparency="true" ></iframe>
+                        </div>
+                    </div>
+                </div>
+                <div id="s5">
+                    <div id="naveiti">
+                        <div style="width:265px; height:38px; margin: -3px -3px 0px 0px;"><img src="../images/suiti.gif" style="cursor:pointer" onclick="scrollFrame('frameitinave',-100);" alt="su" /></div>
+                        <div id="naveitiaspx"></div>                         
+                        <div style="width:265px; height:38px;"><img src="../images/giuiti.gif" style="cursor:pointer" onclick="scrollFrame('frameitinave',100);" alt="giu" /></div>
+                    </div>
+                </div>
+                <div id="datipax"><br />   <br />                   
+                            <h1 style="padding:0px; margin:0px">&nbsp;&nbsp;&nbsp;&nbsp; #titolo#</h1>             
+                </div>
+                <div id="navetta">
+                 <div id="listino" style="padding:5px">
+                    <div id="descrinave" style="font-size:medium; text-align:justify; padding:10px;">
+                        #descrizione#
+                    </div>
+                    <br /><br />
+                    <div id="divnave" style="height:700px;" >
+                            <div id="divimage">
+                                <img src="#imgna#" style="width:250px" title="#titolo#" alt="#titolo#"  />  
+                            </div>
+                            <div id="dettaglionave"> 
+                                <ul>
+                                   <li style="float:none; margin-bottom:10px; width:430px; border-bottom:none;">
+                                        <span class="Cl0">#titolo#</span>  
+                                   </li>                              
+                                </ul>
+                                <ul>                                                 
+                                            <li style="width:430px">
+                                                <span class="Cl4">Anno di costruzione:</span> 
+                                                <span class="Cl3">#annocostruzione#</span> 
+                                            </li>
+                                            <li style="width:430px">
+                                                <span class="Cl4">Numero passeggeri:</span>  
+                                                <span class="Cl3">#numeropax#</span> 
+                                            </li>
+                                            <li style="width:430px">
+                                                <span class="Cl4">Numero membri equipaggio:</span> 
+                                                <span class="Cl3">#numeroequi#</span> 
+                                            </li>
+                                            <li style="width:430px">
+                                                <span class="Cl4">Rapporto persone / equipaggio:</span>
+                                                <span class="Cl3">#rapportopaxequi#</span> 
+                                            </li>
+                                            <li style="width:430px">
+                                                <span class="Cl4">Spazio bordo:</span>
+                                                <span class="Cl3">#spaziobordo#</span>
+                                            </li>
+                                            <li style="width:687px; border-bottom:none;"></li>
+                                            <li>
+                                                <span class="Cl4">Velocit#a# (nodi):</span>
+                                                <span class="Cl2">#velocita#</span>
+                                            </li>
+                                            <li >
+                                                <span class="Cl4">Capacit#a# massima cabina:</span>
+                                                <span class="Cl2">#capacitacabina#</span>
+                                            </li>
+
+                                            <li>
+                                                <span class="Cl4">Numero ponti:</span>
+                                                <span class="Cl2">#numeroponti#</span>
+                                            </li>
+                                            <li >
+                                                <span class="Cl4">Numero cabine totali:</span>
+                                                <span class="Cl2">#cabinetotali#</span>
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Numero cabine interne:</span>
+                                                <span class="Cl2">#cabineinterne#</span>
+                                            </li>
+                                            <li >
+                                                <span class="Cl4">Numero cabine esterne:</span>
+                                                <span class="Cl2">#cabineesterne#</span>
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Numero cabine balcone:</span> 
+                                                <span class="Cl2">#cabinebalcone#</span> 
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Lunghezza (mt.):</span>
+                                                <span class="Cl2">#lunghezza#</span>  
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Larghezza (mt.):</span> 
+                                                <span class="Cl2">#larghezza#</span>
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Stazza (tonnellate):</span>
+                                                <span class="Cl2">#stazza#</span>
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Numero bar e saloni:</span>
+                                                <span class="Cl2">#numerobar#</span>
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Numero ristoranti:</span>
+                                                <span class="Cl2">#numeroristoranti#</span>
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Numero jacuzzi:</span>
+                                                <span class="Cl2">#numerojacuzzi#</span> 
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Numero piscine:</span> 
+                                                <span class="Cl2">#numeropiscine#</span> 
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Numero piscine interne:</span>
+                                                <span class="Cl2">#piscineinterne#</span>
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Numero piscine esterne:</span>
+                                                <span class="Cl2">#piscineesterne#</span> 
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Numero ascensori:</span>
+                                                <span class="Cl2">#ascensori#</span>  
+                                            </li>
+                                            <li style="width:687px; border-bottom:none;"></li>
+                                            <li>
+                                                <span class="Cl4">Teatro:</span>
+                                                #teatro#                               
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Spa:</span> 
+                                                #spa#                               
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Matrimonio a bordo:</span> 
+                                                #matrimoniabordo#                                
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Lavanderia:</span>
+                                                #lavanderia#                           
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Galleria d'arte:</span> 
+                                                #galleriaarte#                               
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Casin#o#:</span>
+                                                #casino#                                
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Cinema:</span>
+                                                #cinema#                               
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Negozi:</span>
+                                                #negozi#                            
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Biblioteca:</span> 
+                                                #biblioteca#                                 
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Discoteca:</span>
+                                                #discoteca#                               
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Sala giochi:</span>
+                                                #salagiochi#                                
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Accesso ad internet:</span> 
+                                                #accessointernet#                              
+                                            </li>
+                                            <li style="width:687px; border-bottom:none;"></li>
+                                            <li>
+                                                <span class="Cl4">Jogging:</span>
+                                                #jogging#                              
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Palestra:</span>
+                                                #palestra#                              
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Campo da basket:</span>
+                                                #campobasket#                              
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Campo da tennis:</span>
+                                                #campotennis#                                
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Minigolf:</span>
+                                                #minigolf#                                
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Simulatore golf:</span>
+                                                #simulatoregolf#                              
+                                            </li>
+                                            <li style="width:687px; border-bottom:none;"></li>
+                                            <li>
+                                                <span class="Cl4">Giardino d'infanzia:</span>
+                                                #giardinoinfanzia#                               
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Zona ragazzi:</span>
+                                                #zonaragazzi#                               
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Programma ragazzi:</span>
+                                                #programmaragazzi#                                
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Zona bambini:</span>
+                                                #zonabambini#                                 
+                                            </li>
+                                            <li>
+                                                <span class="Cl4">Piscina bambini:</span>
+                                                #piscinabambini#                                
+                                            </li>
+                                </ul>
+                            </div>                         
+                    </div> 
+                    <br /><br />
+                        <div id="fotonave" style="height:750px">
+                             #fotonave#
+                        </div>
+                    <br /><br />
+                    <div id="descricabine">
+                        #cabine#                                                                                                                                          
+                    </div>                    
+                </div>
+                </div>
+            </form> 
+        </div>                 
+    </div>    
+
+    <div id="bottom" style="visibility:hidden; width:100%; margin-top:0px; height:130px; background:#AD1063; border-top:#EA7DB6 solid 5px;">
+         <div id="menusotto">
+                <ul>
+                    <li><a href="../chi-siamo.html" title="Chi siamo fersinaviaggi.it">CHI SIAMO</a></li>
+                    <li><a href="../dove-siamo.html" title="Dove siamo">DOVE SIAMO</a></li>
+                    <li><a href="../contatti.html" title="Contatti Fersina Viaggi">CONTATTI</a></li>
+                    <li><a href="../legale.html" target="_blank" title="Avviso legale Fersina Viaggi">AVVISO LEGALE</a></li>
+                    <li><a href="../privacy.html" target="_blank" title="Condizioni privacy Fersina Viaggi">PRIVACY</a></li>
+               </ul>
+            </div> 
+    </div>
+    #script#
+   
+</body>
+</html>

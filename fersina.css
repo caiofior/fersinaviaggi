@@ -1,0 +1,339 @@
+﻿ul.ppt {
+	position: relative;
+}
+
+.ppt li {
+	list-style-type: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.ppt
+{
+    margin: 17px 0 0 0px;
+}
+
+.pr
+{
+    font-family:DS-Digital, Ds-Digital2;
+    font-size:x-large;
+    color: #ff0000;
+}
+
+body 
+{
+    font-family: Arial, "Times New Roman", Times, serif;
+	margin: 0 0 0 0;
+	padding: 0 0 0 0;
+	border-top: #AD1063 solid 150px;		
+
+}
+
+#bordino
+{
+    position:absolute;
+    margin:2px auto;
+    border-bottom:#EA7DB6 solid 5px;   
+    width:100%; 
+}
+
+#layout
+{
+    width: 963px;			
+	padding: 0 0 0 0;
+	margin: -148px auto;    
+	padding-left:3px;
+	padding-right:3px;
+	height:auto;	
+	background: #ffffff;
+}
+
+#layoutassegna
+{
+    width: 700px;			
+	padding: 0 0 0 0;
+	margin: 0px auto;    
+	padding-left:3px;
+	padding-right:3px;
+	height:0px;	
+}
+
+
+#centroprogramma
+{
+    position:fixed;
+    width: 540px;
+    height:430px;
+    background: #ffffff;
+    top: 30%;
+    left: 50%;
+    padding: 10px;
+    margin-left:-200px;
+    text-align:right;   
+}
+
+#layoutnascondi, #layoutnascondi2
+{
+    width:100%; visibility:hidden; position:fixed; height:2000px; top:0; left:0; background: #000000; opacity:0.6;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=60)';filter:alpha(opacity=60);
+    z-index:1000;
+}
+
+#layoutnascondi2
+{
+    opacity:0.8;-ms-filter:'progid:DXImageTransform.Microsoft.Alpha(Opacity=80)';filter:alpha(opacity=80);
+}
+
+
+#logo
+{
+    padding:10px 0 10px 0;   
+    background: #ffffff; 
+}
+
+
+
+#menu, #menusotto
+{
+    width:961px;
+    height:48px;
+    
+}
+
+#menu
+{
+       background: url(images/sfondomenu.gif) repeat-x; 
+       border-bottom:3px solid #ffffff;
+       border-left: 1px solid #ffffff;
+       border-right: 1px solid #ffffff;
+}
+
+#menu ul, #menusotto ul
+{
+    list-style:none;
+    margin:0 0 0 0;
+    padding:0 0 0 0;
+}
+
+#menusotto 
+{
+    margin:4px auto;   
+}
+
+#menu li
+{
+    float:left;    
+    text-align:center;  
+}
+
+#menusotto li
+{
+    width:191px;
+    float:left;    
+    text-align:center;
+    padding-top: 7px;
+    height:25px;
+}
+
+#menu li
+{
+    height:30px;
+    padding:14px 0 4px 0;
+}
+
+
+
+#menu li a:hover
+{
+    color: #575757;
+    
+}
+
+#menu li:hover
+{
+    background: #ffffff;
+}
+
+#menusotto li:hover
+{
+    background: #AD1063;    
+    margin-top:-10px;
+    padding-top:17px;
+}
+
+#menu li a
+{
+    padding:15px 20px 15px 20px;
+    
+}
+
+#menu li a, #menusotto li a
+{
+    font-weight:bold;
+    color: #ffffff;
+    text-decoration:none;
+    
+}
+
+#menusotto li a
+{
+    color: #ffffff;
+    font-size:small;
+    letter-spacing: 2px;
+}
+
+
+#immagini
+{
+    height:350px;
+    margin-top:6px;
+}
+
+#immagini ul
+{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+
+#barra
+{   
+    width:960px;
+    height:120px;
+    margin-top:-61px;
+    position:absolute;
+}
+
+#award
+{
+    position:absolute; margin: 10px 0 0 830px;
+}
+
+#tel
+{
+    position:absolute; margin: 0px 0 0 480px;
+}
+
+#offerte
+{
+    width:966px;
+    margin-top:31px;
+}
+
+#offerte ul, #flottacosta ul, #flottamsc ul
+{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+
+#offerte li
+{
+    float:left;
+    margin-right:3px;
+}
+
+#offerte li img
+{
+    border:none;
+}
+
+#ricerca
+{
+    width:265px;
+    height:286px;
+    margin-top:-348px;
+    background: url(images/bianco.gif);
+    opacity:0.9;
+    -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=90)";
+    filter:alpha(opacity=90); 
+    position:absolute;    
+}
+
+#legale
+{
+    width:900px;   
+    text-align:justify; 
+    font-style:small;
+    margin-top:10px;
+}
+
+#legale p
+{
+    font-size:large;
+    color:#0071BC;
+}
+
+#flottamsc
+{
+    width:478px;
+    height:440px;
+    margin:280px 0 0 0;
+
+    
+}
+
+#flottacosta
+{
+    width:478px;
+    height:440px;
+    margin:-443px 0 0 483px;
+
+}
+
+#flottacosta li, #flottamsc li
+{
+    border-bottom: 1px solid #ffffff;
+    padding: 5px;
+    margin: 0 0px 0 0px;
+    height:20px;
+}
+
+#flottacosta li a, #flottamsc li a
+{
+    color: #ffffff;
+    padding: 5px 100px 7px 3px;
+}
+
+#flottacosta li
+{
+    background: #1E7177;
+}
+
+#flottamsc li
+{
+    background: #00133E;
+}
+
+#flottamsc li a:hover
+{
+    background: #ffffff;
+    color:#00133E;
+}
+
+#flottacosta li a:hover
+{
+    background: #ffffff;
+    color:#1E7177;
+}
+
+
+#flottacosta ul, #flottamsc ul
+{
+    margin-top:3px;
+}
+
+#flmsc, #flcosta
+{
+    position:absolute;
+    margin: -1px 0px 0px 179px;
+    border:1px solid #ffffff;
+}
+
+#incrociera
+{
+    text-align:justify;
+    background: #F8F8F7;
+    padding:10px;
+    color: #D4006C;
+}

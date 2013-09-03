@@ -1,0 +1,185 @@
+﻿body
+{
+    font-family:Arial;
+}
+
+#centroitx
+{
+    width: 670px;
+}
+
+
+#cc, #cc2
+{
+    position:absolute;
+    width:147px;
+    height:161px;
+}
+
+#cc
+{
+    margin: 0 0 0 540px
+}
+
+#cc2
+{
+    margin: 250px 0 0 540px
+}
+
+#dettagliodoc li
+{
+	width:380px;
+	height:30px;
+	margin:0;
+	padding:0;
+}
+#dettagliodoc li
+{
+    font-size:small;    
+    width:500px;
+    border-bottom:1px solid #dcdcdc;
+    padding: 3px 0 3px 0;
+    height:20px;   
+}
+
+#dettagliodoc ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+
+#dettagliodoc
+{
+    text-align:justify;
+}
+
+.XClO, .XClOO, .XClOOO, .XClOOOO, .XClOOOOO, .XClOOOOO, .XCl10000001, .XCl100000001, .XCl10, .XCl110, .XCl01, .XCl001, .XCl0001, .XCl00001, .XCl000001, .XCl0000001, .XCl00000001, .XCl000000001, .XCl0000000001, .XCl00000000001, .XClI, .XClL, .XClM, .XClN, .ClI, .ClL, .ClM, .ClN, .RequireA, .RequireB, .RequireC, .RequireD, .RequireE, .ClO, .ClOO, .ClOOO, .RequireO, .RequireOO, .RequireOOO, .ClP, .ClPP, .ClPPP, .ClPPPP, .XCl201, .XCl202, .XCl203, .XCl204, .XCl205, .XCl206, .XCl207
+{
+	position:absolute;
+	
+}
+
+.XClL
+{
+	margin: 0px 0px 0px 60px;
+}
+
+.XClO
+{
+	margin: 0px 0px 0px 230px;
+}
+.XClOO
+{
+	margin: 0px 0px 0px 271px;
+}
+.XClOOO
+{
+	margin: 0px 0px 0px 312px;
+}
+
+.XCl01 
+{
+    margin: 30px 0px 0px 0px;
+}
+
+.XCl10
+{
+  margin: 60px 0px 0px 0px;  
+}
+
+.XCl110
+{
+  margin: 60px 0px 0px 130px;  
+}
+
+.XCl001
+{
+    margin: 28px 0px 0px 90px;
+}
+
+.XCl0001
+{
+    margin: 30px 0px 0px 230px;
+}
+
+.XCl00001
+{
+    margin: 28px 0px 0px 250px;
+}
+
+.XCl000001
+{
+    margin: 30px 0px 0px 350px;
+}
+
+.XCl0000001
+{
+    margin: 28px 0px 0px 450px;
+}
+
+.XCl00000001
+{
+    margin: 30px 0px 0px 530px;
+}
+
+.XCl000000001
+{
+    margin: 28px 0px 0px 602px;
+}
+
+.XCl10000001
+{
+    margin: 60px 0px 0px 530px;
+}
+
+.XCl100000001
+{
+    margin: 58px 0px 0px 602px;
+}
+
+
+.XCl0000000001
+{
+        margin: 2px 0px 0px 400px;
+}
+
+.XCl00000000001
+{
+        margin: 0px 0px 0px 480px;
+}
+
+.XCl201
+{
+        margin: 105px 0px 0px 0px;
+}
+
+.XCl202
+{
+        margin: 133px 0px 0px 0px;
+}
+
+.XCl203
+{
+        margin: 130px 0px 0px 50px;
+}
+
+.XCl204
+{
+        margin: 133px 0px 0px 200px;
+}
+
+.XCl205
+{
+        margin: 130px 0px 0px 270px;
+}
+
+.XCl206
+{
+        margin: 133px 0px 0px 435px;
+}
+
+.XCl207
+{
+        margin: 130px 0px 0px 500px;
+}

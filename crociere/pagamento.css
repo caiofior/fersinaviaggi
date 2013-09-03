@@ -1,0 +1,68 @@
+﻿body 
+{
+    font-family:Arial, Times New Roman;    
+}
+
+
+.PP1, .PP2, .PP3, .PP4, .PP5, .PP8
+{
+    position:absolute;
+    margin-top:5px;
+    font-size:small;
+}
+
+.PP1
+{
+    font-weight:bold;
+}
+
+.PP2
+{
+ margin: 5px 0 0 90px; 
+ text-align:right;
+ width:70px;
+}
+
+.PP3
+{
+ margin: 5px 0 0 200px;   
+ font-weight:bold;
+}
+
+.PP4
+{
+ margin: 5px 0 0 250px;   
+}
+
+.PP5
+{
+ margin: 5px 0 0 330px;   
+}
+
+.PP8
+{
+  margin: 5px 0 0 470px;  
+}
+
+#divimporto ul
+{
+	list-style:none;
+	margin: 0 0 0 0px;
+	padding: 0;
+}
+
+#divimporto li
+{
+	height:30px;
+	border-bottom: 1px solid #dcdcdc;
+	border-top: 1px solid #dcdcdc;
+	padding:5px;
+	font-size:medium;
+}
+
+#divimporto h1
+{
+    padding:0px;
+    margin:5px 0 5px 0;
+    font-size:medium;
+}

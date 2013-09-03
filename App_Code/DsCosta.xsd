@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="DsCosta" targetNamespace="http://tempuri.org/DsCosta.xsd" xmlns:mstns="http://tempuri.org/DsCosta.xsd" xmlns="http://tempuri.org/DsCosta.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections />
+        <Tables />
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="DsCosta" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:Generator_DataSetName="DsCosta" msprop:Generator_UserDSName="DsCosta">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Categorie" msprop:Generator_TableClassName="CategorieDataTable" msprop:Generator_TableVarName="tableCategorie" msprop:Generator_TablePropName="Categorie" msprop:Generator_RowDeletingName="CategorieRowDeleting" msprop:Generator_UserTableName="Categorie" msprop:Generator_RowChangingName="CategorieRowChanging" msprop:Generator_RowEvHandlerName="CategorieRowChangeEventHandler" msprop:Generator_RowDeletedName="CategorieRowDeleted" msprop:Generator_RowEvArgName="CategorieRowChangeEvent" msprop:Generator_RowChangedName="CategorieRowChanged" msprop:Generator_RowClassName="CategorieRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="codiceperiodo" msprop:Generator_ColumnVarNameInTable="columncodiceperiodo" msprop:Generator_ColumnPropNameInRow="codiceperiodo" msprop:Generator_ColumnPropNameInTable="codiceperiodoColumn" msprop:Generator_UserColumnName="codiceperiodo" type="xs:string" minOccurs="0" />
+              <xs:element name="categoria" msprop:Generator_ColumnVarNameInTable="columncategoria" msprop:Generator_ColumnPropNameInRow="categoria" msprop:Generator_ColumnPropNameInTable="categoriaColumn" msprop:Generator_UserColumnName="categoria" type="xs:string" minOccurs="0" />
+              <xs:element name="disponibile" msprop:Generator_ColumnVarNameInTable="columndisponibile" msprop:Generator_ColumnPropNameInRow="disponibile" msprop:Generator_ColumnPropNameInTable="disponibileColumn" msprop:Generator_UserColumnName="disponibile" type="xs:short" minOccurs="0" />
+              <xs:element name="listino" msprop:Generator_ColumnVarNameInTable="columnlistino" msprop:Generator_ColumnPropNameInRow="listino" msprop:Generator_ColumnPropNameInTable="listinoColumn" msprop:Generator_UserColumnName="listino" type="xs:short" minOccurs="0" />
+              <xs:element name="prezzo" msprop:Generator_ColumnVarNameInTable="columnprezzo" msprop:Generator_ColumnPropNameInRow="prezzo" msprop:Generator_ColumnPropNameInTable="prezzoColumn" msprop:Generator_UserColumnName="prezzo" type="xs:short" minOccurs="0" />
+              <xs:element name="descrizione" msprop:Generator_ColumnVarNameInTable="columndescrizione" msprop:Generator_ColumnPropNameInRow="descrizione" msprop:Generator_ColumnPropNameInTable="descrizioneColumn" msprop:Generator_UserColumnName="descrizione" type="xs:string" minOccurs="0" />
+              <xs:element name="statuscode" msprop:Generator_ColumnVarNameInTable="columnstatuscode" msprop:Generator_ColumnPropNameInRow="statuscode" msprop:Generator_ColumnPropNameInTable="statuscodeColumn" msprop:Generator_UserColumnName="statuscode" type="xs:string" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="prezzi" msprop:Generator_TableClassName="prezziDataTable" msprop:Generator_TableVarName="tableprezzi" msprop:Generator_TablePropName="prezzi" msprop:Generator_RowDeletingName="prezziRowDeleting" msprop:Generator_UserTableName="prezzi" msprop:Generator_RowChangingName="prezziRowChanging" msprop:Generator_RowEvHandlerName="prezziRowChangeEventHandler" msprop:Generator_RowDeletedName="prezziRowDeleted" msprop:Generator_RowEvArgName="prezziRowChangeEvent" msprop:Generator_RowChangedName="prezziRowChanged" msprop:Generator_RowClassName="prezziRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="prezzo" msprop:Generator_ColumnVarNameInTable="columnprezzo" msprop:Generator_ColumnPropNameInRow="prezzo" msprop:Generator_ColumnPropNameInTable="prezzoColumn" msprop:Generator_UserColumnName="prezzo" type="xs:int" minOccurs="0" />
+              <xs:element name="categoria" msprop:Generator_ColumnVarNameInTable="columncategoria" msprop:Generator_ColumnPropNameInRow="categoria" msprop:Generator_ColumnPropNameInTable="categoriaColumn" msprop:Generator_UserColumnName="categoria" type="xs:string" minOccurs="0" />
+              <xs:element name="tipocabina" msprop:Generator_ColumnVarNameInTable="columntipocabina" msprop:Generator_ColumnPropNameInRow="tipocabina" msprop:Generator_ColumnPropNameInTable="tipocabinaColumn" msprop:Generator_UserColumnName="tipocabina" type="xs:short" minOccurs="0" />
+              <xs:element name="codiceperiodo" msprop:Generator_ColumnVarNameInTable="columncodiceperiodo" msprop:Generator_ColumnPropNameInRow="codiceperiodo" msprop:Generator_ColumnPropNameInTable="codiceperiodoColumn" msprop:Generator_UserColumnName="codiceperiodo" type="xs:string" minOccurs="0" />
+              <xs:element name="descrizione" msprop:Generator_ColumnVarNameInTable="columndescrizione" msprop:Generator_ColumnPropNameInRow="descrizione" msprop:Generator_ColumnPropNameInTable="descrizioneColumn" msprop:Generator_UserColumnName="descrizione" type="xs:string" minOccurs="0" />
+              <xs:element name="disponibile" msprop:Generator_ColumnVarNameInTable="columndisponibile" msprop:Generator_ColumnPropNameInRow="disponibile" msprop:Generator_ColumnPropNameInTable="disponibileColumn" msprop:Generator_UserColumnName="disponibile" type="xs:short" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

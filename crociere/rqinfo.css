@@ -1,0 +1,66 @@
+﻿body 
+{
+    font-family: Arial, "Times New Roman", Times, serif;
+    margin:0;
+    padding:0;
+}
+
+
+.AT75, .AT76,  .AT77, .AT78
+{
+	position:absolute;
+}
+
+.AT75
+{
+	margin: 6px 0 0 0px;
+}
+
+.AT76
+{
+	margin: 6px 0 0 120px;
+}
+
+.AT77
+{
+	margin: 6px 0 0 430px;
+	width:65px;
+	height:30px;
+	cursor:pointer; 
+	padding: 6px 5px 2px 5px; 
+	border:1px solid #a9a9a9; 
+	text-align:center; 
+	background: #dcdcdc;
+	font-weight:bold;
+}
+
+.AT78
+{
+	margin: 6px 0 0 300px;
+}
+
+#rqinfo
+{
+    position:absolute;
+    width: 500px;
+    height:200px;
+    background: #ffffff;
+    border: 4px solid #00A2A5;
+    padding: 10px;
+    text-align:left;
+    margin:2px;
+}
+
+#rqinfo ul
+{
+    list-style:none;
+    margin:0;
+    padding: 0;
+}
+
+#rqinfo li
+{
+    padding: 4px 0 4px 0;
+    border-bottom: 1px solid #dcdcdc;
+    height: 30px;
+}

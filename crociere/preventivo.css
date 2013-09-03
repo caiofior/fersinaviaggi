@@ -1,0 +1,109 @@
+﻿body 
+{
+    font-family: Arial;
+    font-size:small;
+}
+
+#divpreventivo ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+
+
+
+#divpreventivo li
+{
+    width:684px;
+	height:22px;
+	margin:0;
+	padding:6px 0 0 0;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+
+
+
+#layoutcosta
+{
+    width:682px;
+}
+
+
+
+#layoutcosta h1
+{
+    color:#ffffff;
+    font-size:medium;
+    margin:0 0 5px -2px;
+    background: url(../images/sfondo-verde.gif) repeat-x;
+    height: 28px;
+    padding: 10px 0 0 5px;
+    width:682px;    
+}
+
+
+
+.Cl1, .Cl2, .Cl3, .Cl4
+{
+	position:absolute;
+}
+
+.Cl1
+{
+	margin: 0px 0px 0px 3px;
+}
+.Cl2
+{
+	margin: 0px 0px 0px 490px;
+	text-align:center;
+	width:10px;
+}
+.Cl3
+{
+	margin: 0px 0px 0px 510px;
+	width:80px;
+	text-align: right;	
+}
+.Cl4
+{
+	margin: 0px 0px 0px 600px;
+	width:80px;
+	text-align: right;	
+}
+
+
+#menu
+{
+    margin-top:60px;
+    width:700px;
+}
+
+#menu ul
+{
+    margin:0px 0 0 -4px ;
+    padding:0px;
+    list-style:none;
+}
+
+
+#menu li
+{
+    float:left;
+    width:171px;
+    height:120px;
+    text-align:center;
+    border:1px solid #0171BB;
+    margin-right:-1px;
+    padding-top:5px;
+    border-bottom:3px solid #0171BB;
+    cursor:pointer;
+}
+
+#menu li:hover
+{
+   margin-top: -7px;
+   height:140px; 
+   border-bottom:1px solid #ffffff;
+}

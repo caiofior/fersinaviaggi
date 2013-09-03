@@ -1,0 +1,316 @@
+﻿body
+{
+    font-family: Arial, "Times New Roman", Times, serif;
+}
+
+#centrocontratto
+{
+    width:680px;
+}
+
+#dettagliocontratto
+{
+    font-size:small;
+    text-align:justify;
+}
+
+
+
+#dettagliocontratto p
+{
+    margin: 10px 0 0 0;
+    font-weight:bold;
+    background:none;
+    width:auto;
+    position:relative;
+    color: Black;
+    height:auto;
+}
+
+
+#dettagliocontratto ul
+{
+    margin:0px;
+    padding:0px;
+    list-style:0px;
+}
+
+#dettagliocontratto li
+{
+    border-bottom: 1px solid #dcdcdc;
+    width:auto;
+    height: auto;
+    float:none;
+    position:relative;
+}
+
+#astoi
+{
+    position:absolute;
+    margin: -10px 0 0 435px;
+}
+
+#astoi img
+{
+    position:static;
+    float:none;
+}
+
+#titolocontratto
+{
+    height:100px;
+    text-align:left;
+    font-size:small;
+    font-size:small;
+}
+
+#titolocontratto p
+{
+    margin: 30px 0 0 0px;
+    font-weight:bold;
+    background:none;
+    width:auto;
+    color: Black;
+    position:relative;
+}
+
+#dentrocontratto
+{
+    height:1050px;
+}
+
+#divagenzia, #divoperatore
+{
+    position:absolute;
+    border: 1px solid #a9a9a9;
+    width: 330px;
+    height: 105px;
+    font-size:small;
+}
+
+#divagenzia ul, #divoperatore ul, #divclientecontratto ul, #divpersonecontratto ul, #serviziocontratto ul, #prezzicontratto ul, #pagamenticontratto ul
+{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+
+#divagenzia li, #divoperatore li, #divclientecontratto li, #divpersonecontratto li, #serviziocontratto li, #prezzicontratto li, #pagamenticontratto li
+{
+    margin:2px;
+    padding:2px 0 2px 0;    
+    height:20px;
+    border-bottom: 1px solid #a9a9a9;
+    width:auto;
+}
+
+#divpersonecontratto li, #serviziocontratto li, #prezzicontratto li,  #divclientecontratto li
+{
+    height:18px;
+}
+
+#pagamenticontratto li
+{
+    height:14px;
+}
+
+#divclientecontratto
+{
+    position:absolute;
+    margin: 115px 0 0 0;
+    border: 1px solid #a9a9a9;
+    width: 670px;
+    height: 75px;
+    font-size:small;
+}
+
+#divpersonecontratto
+{
+    border: 1px solid #a9a9a9;
+    width: 670px;
+    height: auto;    
+    font-size:small;
+}
+
+#sottocontratto
+{
+    position:absolute;
+    margin: 200px 0 0 0;
+    font-size:small;
+    width: 680px;
+}
+
+#serviziocontratto
+{
+    border: 1px solid #a9a9a9;
+    width: 670px;
+    height: auto;    
+}
+
+#prezzicontratto
+{
+    border: 1px solid #a9a9a9;
+    width: 450px;
+    height: auto;
+}
+
+#pagamenticontratto
+{
+    position: absolute;
+    margin: 0 0 0 460px;
+    border: 1px solid #a9a9a9;
+    width: 210px;
+    height: auto;
+    font-size:x-small;
+}
+
+#pagamenticontratto li
+{
+    font-size:x-small;
+}
+
+#divagenzia
+{
+    margin: 0px;
+}
+
+#divoperatore
+{
+    margin: 29px 0 0 340px;
+    height:76px;
+}
+
+.RT1, .RT2, .RT11, .RT3, .RT4, .RT5, .RT6, .RT7, .RT8, .RT9, .RT10, .RT12, .RT13, .RT14, .RT15, .RT16, .RT17, .RT18, .RT19, .RT20, .RT21, .RT22
+{
+    position:absolute
+}
+
+.RT1
+{
+    margin:0px;
+    color:#067788;
+    font-weight:bold;
+}
+
+.RT2
+{
+    margin: 0 0 0 140px;
+}
+
+.RT3
+{
+    margin: 0 0 0 250px;
+    color:#067788;
+    font-weight:bold;
+}
+
+.RT4
+{
+    margin: 0 0 0 370px;
+}
+
+.RT5
+{
+   margin: 340px 0 0 0px;
+   font-weight:bold; 
+}
+
+.RT6
+{
+   margin: 0px 0 0 500px;
+   color:#067788;
+   font-weight:bold; 
+}
+
+.RT7
+{
+   margin: 0px 0 0 590px;   
+}
+
+.RT8
+{
+   margin: 0 0 0 360px; 
+}
+
+.RT9
+{
+    margin: 0 0 0 300px;
+}
+
+.RT10
+{
+    margin: 0 0 0 400px;
+    color:#067788;
+    font-weight:bold; 
+}
+
+.RT12
+{
+    margin: 0 0 0 450px;
+}
+
+.RT13
+{
+    margin: 0 0 0 370px;
+    color:#067788;
+    font-weight:bold; 
+}
+
+.RT14
+{
+    margin:0;
+    font-size:small;
+}
+
+.RT15
+{
+    margin:0 0 0  185px;
+    width:100px;
+    text-align:right;
+}
+
+.RT16
+{
+    margin:0 0 0  280px;  
+    width:80px;
+    text-align:right;  
+}
+
+.RT17
+{
+    margin:0 0 0  340px;
+    width:100px;
+    text-align:right;
+}
+
+.RT18
+{
+    margin:0 0 0  200px;
+}
+
+.RT19
+{
+    margin: 0 0 0 45px;
+    text-align:right;
+    width:60px;
+}
+
+.RT20
+{
+    margin: 0 0 0 110px;
+    color:#067788;
+    font-weight:bold; 
+}
+
+
+.RT21
+{
+    margin: 0 0 0 140px;
+}
+
+.RT22
+{
+    margin: 0 0 0 193px;
+    color:#067788;
+    font-weight:bold; 
+}

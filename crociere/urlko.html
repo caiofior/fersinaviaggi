@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Fersinaviaggi.it - Transazione errata</title>
+    <link rel="stylesheet" href="../fersina.css" type="text/css" />
+    <style type="text/css">
+        body{font-family:Arial, Times New Roman}
+    </style>
+</head>
+<body>
+    <div id="layout" style="margin-top:130px;">
+        <div id="centrodescri2" style="text-align:center">
+            Transazione non avvenuta!<br /><br />           
+             <a id="lnk" href="">Per riaccedere alla prenotazione premi qui</a><br /><br />
+              OPPURE<br /><br />
+            <a href="../index.html" title="fersina viaggi">Torna alla home</a>            
+        </div>
+    </div>
+        <script language="javascript" type="text/javascript">
+            //<--
+            function getParameter() {
+
+                var allParams = new Array();
+
+
+                var url = unescape(String(this.location));
+
+
+                if (url.indexOf('?') < 0)
+                    return null;
+
+                var paramList = url.split("?")[1];
+
+
+                var params = paramList.split("&");
+
+
+                for (var i = 0; i < params.length; i++) {
+                    var temp = params[i].split("=");
+
+
+                    allParams[temp[0]] = temp[1];
+                }
+
+                return allParams;
+            }
+
+            var params = getParameter();
+
+            var paramCtx = params['lnk'] + "?codice=" + params['codice'] + "&cap=" + params['cap'] + "&remoto=1";
+            document.getElementById("lnk").href = paramCtx;
+            //-->             
+    </script>
+</body>
+</html>

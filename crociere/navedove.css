@@ -1,0 +1,22 @@
+﻿body 
+{
+    font-family: Tahoma, Arial, Times New Roman;
+    font-size: small;
+}
+
+
+#itinave
+{
+}
+
+#itinave ul
+{
+    list-style:none;
+    margin:0px;
+    padding:0px;    
+}
+
+#itinave li
+{
+    padding:0px;    
+}

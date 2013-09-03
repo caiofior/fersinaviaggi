@@ -1,0 +1,66 @@
+﻿body 
+{
+    font-family:Arial, Times New Roman;    
+}
+
+
+#divpacchetti ul 
+{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+
+#divpacchetti li
+{
+    
+}
+
+#rptwel ul, #rptbev ul, #rptaltri ul
+{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+    padding-top:30px;
+}
+
+#rptwel li, #rptbev li, #rptaltri li
+{
+    border-bottom: 1px solid #dcdcdc;
+    height:28px;
+    width:560px;
+}
+
+.GG0, .GG1, .GG2, .GG3, .GG4
+{
+    position:absolute;
+}
+
+.GG0
+{
+    margin: 2px 0px 0px 0px;
+}
+
+.GG1
+{
+    margin: 5px 0px 0px 40px;
+}
+
+.GG2
+{
+    margin: 5px 0px 0px 370px;
+    width:60px;
+    text-align:right;
+}
+.GG3
+{
+    margin: 5px 0px 0px 430px;
+        width:60px;
+    text-align:right;
+}
+
+.GG4
+{
+    margin: 3px 0px 0px 500px;
+
+}

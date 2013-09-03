@@ -1,0 +1,720 @@
+﻿body 
+{
+    -webkit-text-size-adjust: 100%;
+    position:relative;
+}
+
+
+
+#fbiframe
+{
+transform: scale(1.8);
+-ms-transform: scale(1.8); 
+-webkit-transform: scale(1.8); 
+-o-transform: scale(1.8); 
+-moz-transform: scale(1.8); 
+transform-origin: bottom left;
+-ms-transform-origin: bottom left;
+-webkit-transform-origin: bottom left;
+-moz-transform-origin: bottom left;
+-webkit-transform-origin: bottom left;
+}
+
+
+#sotto
+{
+    width:963px;
+    height:50px;
+    margin-top:10px;
+    background: url(../images/fersina-sotto.gif) #139EB3;
+}
+
+#pagine, #pagine2
+{
+    margin: 103px 0 0 530px;
+    position:absolute;
+    text-align:right;
+    width: 420px;
+}
+
+#pagine ul, #pagine2 ul
+{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+}
+
+#pagine li, #pagine2 li
+{
+    width:26px;
+    height:22px;
+    padding-top:4px;
+    float:right;
+    margin-right:2px;
+    background: url(../images/pag.gif) no-repeat;
+    text-align:center;
+}
+
+#pagine li:hover, #pagine2 li:hover
+{
+    background:url(../images/ttpaginasel.gif) no-repeat;
+}
+
+#pagine li a,  #pagine2 li a
+{
+    font-weight:bold;
+    color: #139EB3;
+    text-decoration:none;
+}
+
+#dentrop, #dentrop2
+{
+    font-size:small;
+    position:absolute;
+    margin: 5px 0 0 -310px;
+    color: #ffffff;
+}
+
+#pagine2
+{
+    margin:15px 0 15px 530px;
+}
+
+
+.ClA, .ClB, .ClC, .ClE, .cle1, .cle2, .cle3, .cle4, .cle6, .cle7, .cle8, .cle9, .cle10, .cle11, .Cl1, .Cl2, .Cl3, .Cl10, .Cl11
+{	
+	position:absolute;
+}
+
+
+
+.Cl1
+{
+    margin:0 0 0 0;
+    font-weight:bold;
+    color: #1E7177;
+}
+
+.Cl2
+{
+    margin:0 0 0 200px;    
+}
+
+.Cl3
+{
+    margin:0 0 0 130px;
+}
+
+.ClA
+{
+	margin: 43px 0 0 2px;
+	padding: 0 0 0 0;
+}	
+
+.ClB
+{
+	margin: 0px 0 0 170px;
+	padding: 0 0 0 0;
+	font-size:small;	
+}
+
+.ClC
+{
+	margin: 40px 0 0 789px;
+	padding: 3px 0 0 0;
+	   border-right: 1px solid #10AAC6;
+	   width: 170px;
+	   height: 113px;
+}
+
+.ClE
+{
+	margin: -5px 0 0 767px;
+	width:128px;
+	text-align:center;
+	padding-top:1px;
+}
+
+.ClE img
+{
+    border:none;
+}
+
+.ClD
+{
+	position:relative;
+	float:left;
+	width:60px;
+	background: transparent;
+	color: #067788;
+	font-weight:normal;
+	height:auto;
+}
+
+
+.ClB li a
+{
+	color:#067788;
+	font-weight:bold;
+	font-size:small;
+}
+
+.cle1, .cle2 
+{
+    font-size:small;
+    font-weight:bold;
+}
+
+.cle1
+{
+    margin:10px 0 0 0;
+}
+
+.cle2
+{
+    margin:10px 0 0  200px;
+}
+
+.cle3
+{
+    margin:0px 0 0 0;
+}
+
+.cle4
+{
+    margin: 0 0 0 200px;
+}
+
+.cle5
+{
+    margin: 2px 0 0 0;
+}
+
+.cle6
+{
+    margin: 8px 0 0 200px;
+    font-size:small;
+}
+
+.cle7
+{
+    margin: 5px 0 0 425px;
+}
+
+.cle8
+{
+    margin: 5px 0 0 505px;
+    height:21px;
+}
+
+.cle9
+{
+    font-size:x-small;
+    margin: 0px 0 0 53px;
+    color:Blue;
+}
+
+.cle10
+{
+    margin: 5px 0 0 505px;
+}
+
+.cle11
+{
+    font-size:x-small;
+    margin: -7px 0 0 505px;
+}
+
+#dettaglio li
+{
+	width:500px;
+	height:30px;
+	margin:0;
+	padding:0 0 0 0;
+}
+
+#prezzi li
+{
+	width:960px;
+	height:30px;
+	margin:0;
+	padding:0;
+}
+
+#elenco ul
+{
+    list-style:none;
+    margin:50px 0 0 0;
+    padding:0px;
+        
+}
+
+#elenco
+{
+    margin: 130px 0 0 0;
+	padding: 0 0 0 0;
+}
+
+#elenco li
+{
+   width:960px;
+   border-bottom: 2px solid #10AAC6;
+   border-left: 1px solid #10AAC6;
+
+}
+
+#pbanda
+{
+    position:absolute;
+    margin: 0px 0 0 180px;
+}
+
+#compa
+{
+    position:absolute;
+    margin: -7px 0 0 20px;
+}
+
+#contenuto
+{
+    margin-top:-60px;
+}
+
+#contenuto1 ul, #contenuto2 ul
+{
+    margin:0px;
+    padding:0px;
+}
+
+#contenuto1 li, #contenuto2 li
+{
+	width:333px;
+	height:20px;
+	margin:0px;
+    padding:0px;
+    border: none;
+    margin-bottom:5px;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+#contenuto1, #contenuto2 
+{
+    position:absolute;
+    width:355px;
+    padding:0px;
+    margin: 30px 0 0 182px;
+
+}
+
+#contenuto2
+{
+    margin: 30px 0 0 440px;   
+}
+
+.titolo
+{
+    font-size: small;
+    font-weight:bold;
+    color: #ffffff;
+}
+
+#vistaprezzi
+{
+    position:absolute;
+    margin: 106px 0 0 178px;
+    width: 601px;    
+}
+
+
+#vistaprezzi ul
+{
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+
+#vistaprezzi li
+{
+    width:142px;
+    border:none;
+    height:40px;
+    border: 1px solid #dcdcdc;
+    padding-top:5px;
+    float:left;
+    margin-left:5px;
+    background: #D0DCEE;
+}
+
+.a1, .a2, .a3
+{
+    position:absolute;
+    font-size:small;
+}
+
+.a1
+{
+    margin:0px 0 0 5px;
+    color: #AD1063; 
+    width:140px;
+    text-align:center;
+
+}
+
+.a2
+{
+    margin:24px 0 0 0px;
+    width:60px;
+    text-align:right;
+    font-size:small;
+    text-decoration: line-through;
+}
+
+.a3
+{
+    margin:20px 0 0 65px;
+    width:70px;
+    text-align:right;
+    font-size:large;
+}
+
+#barraalta
+{
+    background: url(../images/banda-sopra.gif) no-repeat;
+    height:117px;
+    width:963px;
+}
+
+#linkcroce 
+{
+    position: absolute;
+    margin: 0px 0px 0px 155px;
+    font-family: Tahoma, Arial;
+    color: #10AAC6; 
+    padding: 2px 50px 7px 60px;
+    background: url(../images/tornaricerca.gif) no-repeat;
+}
+
+#linkcroce a
+{
+    color: #ffffff; 
+    
+}
+
+#barraprezzo
+{
+    position:absolute;
+    margin: 10px 0 0 30px;    
+    color: #ffffff;
+    font-weight:bold; 
+    font-size:xx-large;
+}
+
+#barratitolo
+{
+    position:absolute;
+    margin: 50px 0 0 250px;    
+    color: #ffffff;
+    font-size:large;
+}
+
+#contenutocrociera
+{
+    margin: 20px 0 0 0;
+}
+
+#fotoiti
+{
+    width: 265px;
+    height:430px;
+    border-bottom: 1px solid #17ABC1;
+    border-left: 1px solid #17ABC1;
+    margin-top: -40px;
+    
+}
+
+#fotoiti img
+{
+    margin: 10px 0 0 25px;
+}
+
+#premio, #domande
+{
+    margin-top:30px;
+    width: 241px;
+    height:241px;
+    border: 1px solid #17ABC1;
+    padding:12px;
+}
+
+#facebook
+{
+    margin-top:30px;
+    width: 245px;
+    height:259px;
+    border: 1px solid #17ABC1;
+    padding:6px 0 0 20px;
+}
+
+
+ #facebookmargin
+ {
+     width: 230px;
+     height: 245px;
+     overflow:hidden;
+     padding: -1px -20px 0 0px;  
+ }
+
+#domande
+{
+    cursor:pointer;
+}
+
+
+#testoiti
+{
+    margin: 10px 0 0 15px;
+    font-size:small;
+    width: 235px;
+}
+
+#datipax
+{
+    margin: -1338px 0 0 266px;
+    width:696px;
+    height: 100px;
+    border-bottom: 1px solid #17ABC1;
+    border-right: 1px solid #17ABC1;
+}
+
+#listino
+{
+    margin: 0px 0 0 266px;
+    width:696px;
+    height: 331px;    
+    border-left: 1px solid #17ABC1;
+}
+
+#datipax ul, #listino ul
+{
+    margin: 0px 0px 0px 50px;
+    padding:0px 0px 0px 0px ;
+    list-style:none;
+}
+
+#listino ul
+{
+    margin: 0px 0px 0px 20px;
+}
+
+#datipax li, #listino li
+{
+    border-bottom:1px solid #dcdcdc;
+    height:25px;
+    padding-top:5px;
+}
+
+
+#s1, #s2, #s3, #s4
+{
+    margin-left:-3px; 
+    padding-left:3px;
+    margin-bottom:3px;
+    padding-bottom:3px;
+    background: url(../images/angolo-sinistro-basso.gif)  bottom left no-repeat;
+}
+
+#titolo
+{
+    height:36px;
+    width:688px;
+    border-bottom: 1px solid #10AAC6;
+    margin: 30px 0 10px 8px;
+    font-weight:bold;
+}
+
+
+#Hypercabine , #Hyperfotonave, #Hyperdatinave
+{
+    position:absolute;
+    padding: 8px 0 0 70px;
+    font-size:medium;    
+}
+
+#Hypercabine, #Hypercabine2, #Hypercabine3
+{
+    background:url(../images/sfondo-delimita.gif) no-repeat;
+    margin: 0px 0 0 498px;
+    width:160px;
+    height: 34px;
+    color: #ffffff;
+    cursor:pointer;
+}
+
+#Hypercabine:hover, #Hypercabine2:hover, #Hypercabine3:hover
+{
+    background:url(../images/sfondo-delimita6.gif) no-repeat;
+}
+
+#Hyperfotonave, #Hyperfotonave2, #Hyperfotonave3
+{
+    background:url(../images/sfondo-delimita2.gif) no-repeat;
+    margin: 0px 0 0 303px;
+    width:170px;
+    height: 34px;
+    color: #ffffff;
+    cursor:pointer;
+}
+
+#Hyperfotonave:hover, #Hyperfotonave2:hover, #Hyperfotonave3:hover
+{
+    background:url(../images/sfondo-delimita5.gif) no-repeat;
+}
+
+#Hyperdatinave, #Hyperdatinave2, #Hyperdatinave3
+{
+    background:url(../images/sfondo-delimita5.gif) no-repeat;
+    margin: 0px 0 0 108px;
+    width:170px;
+    height: 34px;
+    color: #ffffff;
+    cursor:pointer;
+}
+
+#Hyperdatinave3
+{
+    background:url(../images/sfondo-delimita2.gif) no-repeat;
+}
+
+#Hyperdatinave:hover, #Hyperdatinave2:hover, #Hyperdatinave3:hover
+{
+    background:url(../images/sfondo-delimita5.gif) no-repeat;
+}
+
+#Hypercabine2 , #Hyperfotonave2, #Hyperdatinave2
+ {
+    position:absolute;
+    padding: 8px 35px 0 35px;
+    font-size:small;
+    text-align:center;
+ }
+ 
+ #Hypercabine3 , #Hyperfotonave3, #Hyperdatinave3
+ {
+    position:absolute;
+    padding: 8px 35px 0 35px;
+    font-size:small;
+    text-align:center;
+ }
+
+
+#centroponte
+{
+    position:fixed;
+    width: 250px;
+    height:650px;
+    background: #ffffff;
+    top: 10%;
+    left: 50%;
+    padding: 10px;
+    margin-left:-100px;    
+}
+
+
+
+#divquota h1
+{
+    margin:0 0 0 20px;
+    padding:0px;
+    font-size:medium;
+}
+
+#divquota li
+{
+	width:663px;
+	float:none;
+	height:20px;
+	font-size:small;
+}
+
+#divquota ul
+{
+	list-style:disc;
+	margin: 0 0 0 33px;
+}
+
+#offemsc ul, #offecosta ul
+{
+    list-style:none;
+    margin:0px;
+    padding:0px;
+    padding-top:10px;
+}
+
+#offemsc, #offecosta
+{
+
+    text-align:center;
+    background:#ffffff; 
+    padding:0px 0px 10px 0px;
+    margin:0px;
+    position:absolute;
+    visibility:hidden;
+    margin-top: -360px;   
+    font-weight:bold;   
+    z-index:1000;     
+}
+
+#interessare
+{
+    
+    width: 502px;
+    height:130px; 
+    position:fixed;
+    bottom:0;
+    margin-top:-300px;
+
+}
+
+#inte
+{
+    background: url(../images/sfinteressa.gif) bottom repeat-x;
+    width: 10%;
+    height:18px;
+    position:fixed; 
+    bottom:0;
+}
+
+#ultime
+{
+     background:url(../images/ultime-cabine.jpg) no-repeat #AD1063; 
+     position:absolute; 
+     margin: 6px 0 0 966px; 
+     padding:150px 0 0 0; 
+     width:203px; 
+     height:173px; 
+     font-size:small;
+     color: #000000;
+     text-align:left;
+     overflow:hidden;
+}
+#ultimescroll
+{
+    overflow:hidden;
+    width:203px;
+    height:170px;
+}
+
+#ultime ul
+{
+    list-style:none;
+    padding:0px;
+    margin:0px 0 0 5px;
+}
+
+#ultime li
+{
+   padding:4px;
+   margin:0px;
+   width:180px;
+   border-bottom: 2px solid #ffffff;
+}

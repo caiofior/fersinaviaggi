@@ -1,0 +1,1723 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://schemas.costacrociere.com/WebAffiliation" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://schemas.costacrociere.com/WebAffiliation" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.costacrociere.com/WebAffiliation">
+      <s:element name="ListAvailableCruises">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="from" type="s:dateTime" />
+            <s:element minOccurs="1" maxOccurs="1" name="to" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="destinationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shipCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="portCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListAvailableCruisesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAvailableCruisesResult" type="tns:ArrayOfCruise" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCruise">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cruise" nillable="true" type="tns:Cruise" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Cruise">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Destination" type="tns:Destination" />
+          <s:element minOccurs="0" maxOccurs="1" name="Itinerary" type="tns:Itinerary" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeparturePort" type="tns:City" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArrivalPort" type="tns:City" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Availability" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Sellability" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DepartureDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="Duration" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ship" type="tns:Ship" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxOccupancy" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalInfo" type="tns:AdditionaInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="ImmediateConfirm" type="tns:ImmediateConfirm" />
+          <s:element minOccurs="0" maxOccurs="1" name="AirRemarks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseRemarks" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Destination">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalInfo" type="tns:AdditionaInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AdditionaInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="WarningMessage" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InfoMessage" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Itinerary">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Segments" type="tns:ArrayOfSegment" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalInfo" type="tns:AdditionaInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="AirRemarks" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseRemarks" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSegment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Segment" nillable="true" type="tns:Segment" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Segment">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Port" type="tns:City" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArrivalTime" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="DepartureTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="City">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalInfo" type="tns:AdditionaInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Ship">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalInfo" type="tns:AdditionaInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ImmediateConfirm">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsImmediateConfirm" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="Agency" type="tns:Agency" />
+      <s:complexType name="Agency">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Culture" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="Partner" type="tns:Partner" />
+      <s:complexType name="Partner">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Password" type="s:string" />
+        </s:sequence>
+        <s:anyAttribute />
+      </s:complexType>
+      <s:element name="ListAutomaticDiscounts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cruiseCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListAutomaticDiscountsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAutomaticDiscountsResult" type="tns:ArrayOfDiscount" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDiscount">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Discount" nillable="true" type="tns:Discount" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Discount">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Class" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListAllDestinations">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListAllDestinationsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAllDestinationsResult" type="tns:ArrayOfDestination" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfDestination">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Destination" nillable="true" type="tns:Destination" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListAllShips">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListAllShipsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAllShipsResult" type="tns:ArrayOfShip" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfShip">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Ship" nillable="true" type="tns:Ship" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListAllPorts">
+        <s:complexType />
+      </s:element>
+      <s:element name="ListAllPortsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAllPortsResult" type="tns:ArrayOfCity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCity">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="City" nillable="true" type="tns:City" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListShips">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="destinationCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListShipsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListShipsResult" type="tns:ArrayOfShip" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPorts">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="destinationCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="shipCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListPortsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListPortsResult" type="tns:ArrayOfCity" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListFares">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cruiseCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListFaresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListFaresResult" type="tns:ArrayOfFare" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfFare">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Fare" nillable="true" type="tns:Fare" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Fare">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsAllowedToBeChanged" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalInfoRequired" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PromoFlights" type="tns:PromoFlights" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PromoFlights">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="AvailablePromoFlights" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PromoFlightsFees" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="OnlyPromoFlight" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="FlightClass" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListAvailableCabins">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="components" type="tns:ArrayOfComponent" />
+            <s:element minOccurs="0" maxOccurs="1" name="guests" type="tns:ArrayOfGuest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfComponent">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Component" nillable="true" type="tns:Component" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Component">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:ComponentType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cities" type="tns:ArrayOfCity" />
+          <s:element minOccurs="0" maxOccurs="1" name="Fare" type="tns:Fare" />
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="tns:Category" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cabin" type="tns:Cabin" />
+          <s:element minOccurs="0" maxOccurs="1" name="Hotels" type="tns:ArrayOfHotel" />
+          <s:element minOccurs="0" maxOccurs="1" name="TransportationDetails" type="tns:ArrayOfTransportationDetail" />
+          <s:element minOccurs="1" maxOccurs="1" name="Insurance" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="InsuranceAvailableInd" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Mandatory" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="Direction" type="tns:Direction" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalInfo" type="tns:AdditionaInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuranceType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferenceNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="ComponentType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Cruise" />
+          <s:enumeration value="Flight" />
+          <s:enumeration value="Hotel" />
+          <s:enumeration value="Bus" />
+          <s:enumeration value="Transfer" />
+          <s:enumeration value="Train" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="Category">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Availability" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Price" type="tns:ArrayOfGuestPrice" />
+          <s:element minOccurs="1" maxOccurs="1" name="CabinLocation" type="tns:CabinLocation" />
+          <s:element minOccurs="0" maxOccurs="1" name="Ship" type="tns:Ship" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalInfo" type="tns:AdditionaInfo" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsSingleCabin" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxOccupancy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinOccupancy" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="UpgradeCode" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Order" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="CabinAvailabilityInformation" type="tns:CabinAvailabilityInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SuperCategoryType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGuestPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GuestPrice" nillable="true" type="tns:GuestPrice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GuestPrice">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="tns:CategoryTypePrices" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PortChgAmount" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="CategoryTypePrices">
+        <s:restriction base="s:string">
+          <s:enumeration value="P1stAdult" />
+          <s:enumeration value="P2ndAdult" />
+          <s:enumeration value="P3rdAdult" />
+          <s:enumeration value="P3rdChild" />
+          <s:enumeration value="P3rdJunior" />
+          <s:enumeration value="PTotal" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="CabinLocation">
+        <s:restriction base="s:string">
+          <s:enumeration value="Inside" />
+          <s:enumeration value="Outside" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CabinAvailabilityInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfCabins" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Cabin">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="tns:Category" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinOccupancy" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="MaxOccupancy" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeckName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DeckCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Beds" type="tns:ArrayOfBed" />
+          <s:element minOccurs="1" maxOccurs="1" name="Facility" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DiningPreference" type="tns:Dining" />
+          <s:element minOccurs="0" maxOccurs="1" name="Cruise" type="tns:Cruise" />
+          <s:element minOccurs="0" maxOccurs="1" name="URL" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RateInformation" type="tns:RateInformation" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiningWithInformation" type="tns:ArrayOfDiningWith" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalInfo" type="tns:AdditionaInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="GuestsCabinInfo" type="tns:ArrayOfGuestCabinInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="RestaurantInfo" type="tns:RestaurantInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiningSatisfaction" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfBed">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Bed" nillable="true" type="tns:Bed" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Bed">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="BedCode" type="tns:BedCode" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfBeds" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="BedCode">
+        <s:restriction base="s:string">
+          <s:enumeration value="Convertible" />
+          <s:enumeration value="Queen" />
+          <s:enumeration value="Sofa" />
+          <s:enumeration value="Upper" />
+          <s:enumeration value="RollBed" />
+          <s:enumeration value="BabyCot" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="Dining">
+        <s:restriction base="s:string">
+          <s:enumeration value="Unspecified" />
+          <s:enumeration value="Main" />
+          <s:enumeration value="Late" />
+          <s:enumeration value="OpenSeating" />
+          <s:enumeration value="FakeValue" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="RateInformation">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="MiscChargeAmt" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="PortChargeAmt" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDiningWith">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DiningWith" nillable="true" type="tns:DiningWith" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DiningWith">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="BookingNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SequenceNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfGuestCabinInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GuestCabinInfo" nillable="true" type="tns:GuestCabinInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GuestCabinInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="CabinNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CategoryCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RestaurantInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TableSize" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="DefaultRestaurant" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiningInformation" type="tns:ArrayOfDiningInformation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfDiningInformation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="DiningInformation" nillable="true" type="tns:DiningInformation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="DiningInformation">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Code" type="tns:Dining" />
+          <s:element minOccurs="0" maxOccurs="1" name="Status" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Availability" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="AvailableNum" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfHotel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Hotel" nillable="true" type="tns:Hotel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Hotel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoomTypes" type="tns:ArrayOfRoomType" />
+          <s:element minOccurs="0" maxOccurs="1" name="LongDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CurrencyCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRoomType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RoomType" nillable="true" type="tns:RoomType" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RoomType">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfBeds" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoomPrices" type="tns:ArrayOfRoomPrice" />
+          <s:element minOccurs="0" maxOccurs="1" name="Category" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRoomPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="RoomPrice" nillable="true" type="tns:RoomPrice" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RoomPrice">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="NumberOfNights" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="Price" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfTransportationDetail">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="TransportationDetail" nillable="true" type="tns:TransportationDetail" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="TransportationDetail">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Direction" type="tns:Direction" />
+          <s:element minOccurs="0" maxOccurs="1" name="CarrierCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CarrierName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CarrierNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepartureCity" type="tns:City" />
+          <s:element minOccurs="1" maxOccurs="1" name="DepartureDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArrivalCity" type="tns:City" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArrivalDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckInInformation" type="tns:CheckInInformation" />
+          <s:element minOccurs="1" maxOccurs="1" name="DepartureLocationType" type="tns:LocationType" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArrivalLocationType" type="tns:LocationType" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepartureTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArrivalTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Direction">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="InBound" />
+          <s:enumeration value="OutBound" />
+          <s:enumeration value="Both" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="CheckInInformation">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="CheckInDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="TerminalNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="LocationType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Hotel" />
+          <s:enumeration value="Airport" />
+          <s:enumeration value="Port" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfGuest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Guest" nillable="true" type="tns:Guest" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Guest">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LocalizedName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Nationality" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Gender" type="tns:Gender" />
+          <s:element minOccurs="0" maxOccurs="1" name="Title" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="PlaceOfBirth" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="BirthCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LanguageCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Residence" type="tns:GuestResidence" />
+          <s:element minOccurs="0" maxOccurs="1" name="CostaClubNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Document" type="tns:GuestDocument" />
+          <s:element minOccurs="0" maxOccurs="1" name="RevisionControl" type="tns:GuestRevisionControl" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalInfo" type="tns:AdditionaInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Phone" type="tns:ContactPhone" />
+          <s:element minOccurs="1" maxOccurs="1" name="GuestType" type="tns:GuestType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Documents" type="tns:ArrayOfGuestDocument" />
+          <s:element minOccurs="0" maxOccurs="1" name="MCHotel" type="tns:ArrayOfMCHotel" />
+          <s:element minOccurs="0" maxOccurs="1" name="MCTransportation" type="tns:ArrayOfMCTransportation" />
+          <s:element minOccurs="0" maxOccurs="1" name="TTGSequence" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CabinInfo" type="tns:ArrayOfGuestCabinInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="MultiCruiseInsurance" type="tns:MultiCruiseInsurance" />
+          <s:element minOccurs="0" maxOccurs="1" name="Origin" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ActionCodeTTG" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecialServices" type="tns:ArrayOfSpecialServices" />
+          <s:element minOccurs="0" maxOccurs="1" name="ExtendedProperties" type="tns:ExtendedProperties" />
+          <s:element minOccurs="0" maxOccurs="1" name="AgeAmount" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaxId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Email" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="WebCheckIn" type="tns:WebCheckIn" />
+          <s:element minOccurs="0" maxOccurs="1" name="MobilePhone" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SpecialItems" type="tns:ArrayOfSpecialItem" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrivacyInfo" type="tns:PrivacyInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="Compensations" type="tns:ArrayOfCompensation" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="Gender">
+        <s:restriction base="s:string">
+          <s:enumeration value="Female" />
+          <s:enumeration value="Male" />
+          <s:enumeration value="NotAvailable" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="GuestResidence">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Address" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="City" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Zipcode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="State" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Country" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GuestDocument">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ExpirationDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="IssueDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="IssuedInCountry" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IssuedInCity" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="GuestRevisionControl">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="RateChange" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SpecialServicesChanged" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="HotelChange" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="TransportationChange" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="NameChange" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ContactPhone">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:PhoneType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Number" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PhoneType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Home" />
+          <s:enumeration value="Mobile" />
+          <s:enumeration value="Fax" />
+          <s:enumeration value="NA" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="GuestType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Adult" />
+          <s:enumeration value="Child" />
+          <s:enumeration value="Infant" />
+          <s:enumeration value="Junior" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ArrayOfGuestDocument">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="GuestDocument" nillable="true" type="tns:GuestDocument" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMCHotel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MCHotel" nillable="true" type="tns:MCHotel" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MCHotel">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Direction" type="tns:Direction" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="RoomTypes" type="tns:ArrayOfRoomType" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="OtherInfo" type="tns:OtherInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="LongDescription" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="OtherInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DepartureDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArrivalDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfMCTransportation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="MCTransportation" nillable="true" type="tns:MCTransportation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="MCTransportation">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="tns:TransportationType" />
+          <s:element minOccurs="1" maxOccurs="1" name="Direction" type="tns:Direction" />
+          <s:element minOccurs="0" maxOccurs="1" name="CarrierCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CarrierName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CarrierNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepartureCity" type="tns:City" />
+          <s:element minOccurs="1" maxOccurs="1" name="DepartureDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArrivalCity" type="tns:City" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArrivalDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ClassDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CheckInInformation" type="tns:CheckInInformation" />
+          <s:element minOccurs="1" maxOccurs="1" name="DepartureLocationType" type="tns:LocationType" />
+          <s:element minOccurs="1" maxOccurs="1" name="ArrivalLocationType" type="tns:LocationType" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsTransportationAssignment" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DepartureTime" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ArrivalTime" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="TransportationType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Flight" />
+          <s:enumeration value="Bus" />
+          <s:enumeration value="Transfer" />
+          <s:enumeration value="Train" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="MultiCruiseInsurance">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="Insurance" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="InsuranceType" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSpecialServices">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SpecialServices" nillable="true" type="tns:SpecialServices" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SpecialServices">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Date" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="StatusCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CabinNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSVType" type="tns:SSVType" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSVRates" type="tns:SSVRates" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSVRules" type="tns:SSVRules" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSVCategory" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSVAvlLocation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSVSellable" type="tns:SSVSellable" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PaxId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="Delivery" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="GiftText" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Instruction" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PortConfirmation" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VaucherControl" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSVCurrency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Quantity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdultAgeLimits" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ChildAgeLimits" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SSVAvailable" type="tns:SSVAvailable" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrintOnConfLetter" type="tns:PrintOnConfLetter" />
+          <s:element minOccurs="0" maxOccurs="1" name="VoucherInfo" type="tns:VoucherInfo" />
+          <s:element minOccurs="1" maxOccurs="1" name="ServicePriceCharges" type="tns:ServicePriceCharges" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SSVType">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SSVRates">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="CabinAmount" type="s:double" />
+          <s:element minOccurs="1" maxOccurs="1" name="GuestAmount" type="s:double" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SSVRules">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="DateRequiredInd" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="YearsRequiredInd" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="MinimumGuests" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="BeginDate" type="s:dateTime" />
+          <s:element minOccurs="1" maxOccurs="1" name="EndDate" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SSVSellable">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsSSVSellable" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SSVAvailable">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="IsSSVAvailable" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PrintOnConfLetter">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PrintOnConfirmationLetter" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="VoucherInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SSVVoucherControl" type="tns:SSVVoucherControl" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="SSVVoucherControl">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Booking" />
+          <s:enumeration value="Person" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="ServicePriceCharges">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Cabin" />
+          <s:enumeration value="Pax" />
+          <s:enumeration value="DayPax" />
+        </s:restriction>
+      </s:simpleType>
+      <s:complexType name="ExtendedProperties">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FakedBirthdateUsed" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrimaryContact" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="WebCheckIn">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SendAdvertising" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="EmergencyInfo" type="tns:EmercencyInfo" />
+          <s:element minOccurs="0" maxOccurs="1" name="AdditionalAdvertisingInfo" type="tns:AdditionalAdvertisingInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EmercencyInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TelephoneNumber" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="MiddleName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Relationship" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="SequenceNumber" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AdditionalAdvertisingInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="SendAdvertisingNominative" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="SendAdvertisingPartnerCosta" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSpecialItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SpecialItem" nillable="true" type="tns:SpecialItem" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SpecialItem">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CruiseId" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CabinNumber" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsAuto" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="Note" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PrivacyInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PrivacyAuthorization" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfCompensation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Compensation" nillable="true" type="tns:Compensation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="Compensation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Type" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="VoucherId" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Amount" type="s:double" />
+          <s:element minOccurs="0" maxOccurs="1" name="Currency" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeDescription" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ItemType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DiscountCode" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FirstName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="LastName" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="BirthDate" type="s:dateTime" />
+          <s:element minOccurs="0" maxOccurs="1" name="BookingType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="CombinabilityCode" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListAvailableCabinsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAvailableCabinsResult" type="tns:ArrayOfCabin" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCabin">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Cabin" nillable="true" type="tns:Cabin" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListAvailableCabinsWithGroupBooking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="components" type="tns:ArrayOfComponent" />
+            <s:element minOccurs="0" maxOccurs="1" name="guests" type="tns:ArrayOfGuest" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupBooking" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListAvailableCabinsWithGroupBookingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAvailableCabinsWithGroupBookingResult" type="tns:ArrayOfCabin" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListAvailableCategories">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="components" type="tns:ArrayOfComponent" />
+            <s:element minOccurs="0" maxOccurs="1" name="guests" type="tns:ArrayOfGuest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListAvailableCategoriesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAvailableCategoriesResult" type="tns:ArrayOfCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCategory">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Category" nillable="true" type="tns:Category" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="ListAvailableCategoriesWithGroupBooking">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="components" type="tns:ArrayOfComponent" />
+            <s:element minOccurs="0" maxOccurs="1" name="guests" type="tns:ArrayOfGuest" />
+            <s:element minOccurs="0" maxOccurs="1" name="groupBooking" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListAvailableCategoriesWithGroupBookingResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAvailableCategoriesWithGroupBookingResult" type="tns:ArrayOfCategory" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListAvailableSpecialServices">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="components" type="tns:ArrayOfComponent" />
+            <s:element minOccurs="0" maxOccurs="1" name="guests" type="tns:ArrayOfGuest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListAvailableSpecialServicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListAvailableSpecialServicesResult" type="tns:ArrayOfSpecialServices" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCruise">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CruiseCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetCruiseResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetCruiseResult" type="tns:Cruise" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListDocuments">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cruiseCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="ListDocumentsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="ListDocumentsResult" type="tns:ArrayOfCruiseDocument" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfCruiseDocument">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="CruiseDocument" nillable="true" type="tns:CruiseDocument" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="CruiseDocument">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Code" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFlightPromoPriceExists">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="components" type="tns:ArrayOfComponent" />
+            <s:element minOccurs="0" maxOccurs="1" name="guests" type="tns:ArrayOfGuest" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFlightPromoPriceExistsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetFlightPromoPriceExistsResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCruiseInImmediateConfirmForFare">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="cruiseCode" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="fareCode" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="IsCruiseInImmediateConfirmForFareResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="IsCruiseInImmediateConfirmForFareResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="ListAvailableCruisesSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAvailableCruises" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCruisesSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAvailableCruisesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCruisesAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCruisesPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListAutomaticDiscountsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAutomaticDiscounts" />
+  </wsdl:message>
+  <wsdl:message name="ListAutomaticDiscountsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAutomaticDiscountsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListAutomaticDiscountsAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListAutomaticDiscountsPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListAllDestinationsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAllDestinations" />
+  </wsdl:message>
+  <wsdl:message name="ListAllDestinationsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAllDestinationsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListAllDestinationsAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListAllDestinationsPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListAllShipsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAllShips" />
+  </wsdl:message>
+  <wsdl:message name="ListAllShipsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAllShipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListAllShipsAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListAllShipsPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListAllPortsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAllPorts" />
+  </wsdl:message>
+  <wsdl:message name="ListAllPortsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAllPortsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListAllPortsAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListAllPortsPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListShipsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListShips" />
+  </wsdl:message>
+  <wsdl:message name="ListShipsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListShipsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListShipsAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListShipsPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListPortsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListPorts" />
+  </wsdl:message>
+  <wsdl:message name="ListPortsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListPortsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListPortsAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListPortsPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListFaresSoapIn">
+    <wsdl:part name="parameters" element="tns:ListFares" />
+  </wsdl:message>
+  <wsdl:message name="ListFaresSoapOut">
+    <wsdl:part name="parameters" element="tns:ListFaresResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListFaresAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListFaresPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCabinsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAvailableCabins" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCabinsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAvailableCabinsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCabinsAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCabinsPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCabinsWithGroupBookingSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAvailableCabinsWithGroupBooking" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCabinsWithGroupBookingSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAvailableCabinsWithGroupBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCabinsWithGroupBookingAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCabinsWithGroupBookingPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCategoriesSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAvailableCategories" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCategoriesSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAvailableCategoriesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCategoriesAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCategoriesPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCategoriesWithGroupBookingSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAvailableCategoriesWithGroupBooking" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCategoriesWithGroupBookingSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAvailableCategoriesWithGroupBookingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCategoriesWithGroupBookingAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableCategoriesWithGroupBookingPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableSpecialServicesSoapIn">
+    <wsdl:part name="parameters" element="tns:ListAvailableSpecialServices" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableSpecialServicesSoapOut">
+    <wsdl:part name="parameters" element="tns:ListAvailableSpecialServicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableSpecialServicesAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListAvailableSpecialServicesPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="GetCruiseSoapIn">
+    <wsdl:part name="parameters" element="tns:GetCruise" />
+  </wsdl:message>
+  <wsdl:message name="GetCruiseSoapOut">
+    <wsdl:part name="parameters" element="tns:GetCruiseResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetCruiseAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="GetCruisePartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="ListDocumentsSoapIn">
+    <wsdl:part name="parameters" element="tns:ListDocuments" />
+  </wsdl:message>
+  <wsdl:message name="ListDocumentsSoapOut">
+    <wsdl:part name="parameters" element="tns:ListDocumentsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ListDocumentsAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="ListDocumentsPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="GetFlightPromoPriceExistsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFlightPromoPriceExists" />
+  </wsdl:message>
+  <wsdl:message name="GetFlightPromoPriceExistsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFlightPromoPriceExistsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFlightPromoPriceExistsAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="GetFlightPromoPriceExistsPartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:message name="IsCruiseInImmediateConfirmForFareSoapIn">
+    <wsdl:part name="parameters" element="tns:IsCruiseInImmediateConfirmForFare" />
+  </wsdl:message>
+  <wsdl:message name="IsCruiseInImmediateConfirmForFareSoapOut">
+    <wsdl:part name="parameters" element="tns:IsCruiseInImmediateConfirmForFareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IsCruiseInImmediateConfirmForFareAgency">
+    <wsdl:part name="Agency" element="tns:Agency" />
+  </wsdl:message>
+  <wsdl:message name="IsCruiseInImmediateConfirmForFarePartner">
+    <wsdl:part name="Partner" element="tns:Partner" />
+  </wsdl:message>
+  <wsdl:portType name="AvailabilitySoap">
+    <wsdl:operation name="ListAvailableCruises">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all cruises: those cruises could be available or not, sellable or not. 
+				Possible parameter configuration are: (from), (from, to), (from, destination),
+				(from, ship), (from, port), (from, to, destination),(from, to, ship), (from, to, port)
+				(from, destination, ship), (from, to, destination, ship),(from, destination, port), 
+				(from, to, destination, port), (from, destination, ship, port), (from, to, destination, ship, port),
+				(from, ship, port), (from, to, ship, port).
+				Standard behaviours: 
+				- to omit a parameter set it as nil;
+				- if the 'to' date is nil, the system returns all cruises that leave in date 'from'
+				- if the 'to' date isn't nil, it must be within range 'from' + 30 days
+				- the from date is always mandatory</wsdl:documentation>
+      <wsdl:input message="tns:ListAvailableCruisesSoapIn" />
+      <wsdl:output message="tns:ListAvailableCruisesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAutomaticDiscounts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all automatic discount for a cruise</wsdl:documentation>
+      <wsdl:input message="tns:ListAutomaticDiscountsSoapIn" />
+      <wsdl:output message="tns:ListAutomaticDiscountsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAllDestinations">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all available destinations for booking</wsdl:documentation>
+      <wsdl:input message="tns:ListAllDestinationsSoapIn" />
+      <wsdl:output message="tns:ListAllDestinationsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAllShips">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve available all ships for booking</wsdl:documentation>
+      <wsdl:input message="tns:ListAllShipsSoapIn" />
+      <wsdl:output message="tns:ListAllShipsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAllPorts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all available ports for booking</wsdl:documentation>
+      <wsdl:input message="tns:ListAllPortsSoapIn" />
+      <wsdl:output message="tns:ListAllPortsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListShips">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all available ships for destination</wsdl:documentation>
+      <wsdl:input message="tns:ListShipsSoapIn" />
+      <wsdl:output message="tns:ListShipsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListPorts">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all ports available.
+					Possible parameter configurations are: (destination), (ship), (destination, ship)</wsdl:documentation>
+      <wsdl:input message="tns:ListPortsSoapIn" />
+      <wsdl:output message="tns:ListPortsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListFares">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all available fares for a cruise</wsdl:documentation>
+      <wsdl:input message="tns:ListFaresSoapIn" />
+      <wsdl:output message="tns:ListFaresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCabins">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all available cabins for a category of a cruise</wsdl:documentation>
+      <wsdl:input message="tns:ListAvailableCabinsSoapIn" />
+      <wsdl:output message="tns:ListAvailableCabinsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCabinsWithGroupBooking">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all available cabins for a category of a cruise</wsdl:documentation>
+      <wsdl:input message="tns:ListAvailableCabinsWithGroupBookingSoapIn" />
+      <wsdl:output message="tns:ListAvailableCabinsWithGroupBookingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCategories">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all available categories for a category of a cruise</wsdl:documentation>
+      <wsdl:input message="tns:ListAvailableCategoriesSoapIn" />
+      <wsdl:output message="tns:ListAvailableCategoriesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCategoriesWithGroupBooking">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all available categories for a category of a cruise</wsdl:documentation>
+      <wsdl:input message="tns:ListAvailableCategoriesWithGroupBookingSoapIn" />
+      <wsdl:output message="tns:ListAvailableCategoriesWithGroupBookingSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableSpecialServices">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Retrieve all available specialservices for a cruise</wsdl:documentation>
+      <wsdl:input message="tns:ListAvailableSpecialServicesSoapIn" />
+      <wsdl:output message="tns:ListAvailableSpecialServicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetCruise">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">returns a fully-described Cruise</wsdl:documentation>
+      <wsdl:input message="tns:GetCruiseSoapIn" />
+      <wsdl:output message="tns:GetCruiseSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="ListDocuments">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Get the documents needed for a booking</wsdl:documentation>
+      <wsdl:input message="tns:ListDocumentsSoapIn" />
+      <wsdl:output message="tns:ListDocumentsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightPromoPriceExists">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return true if promo flight is available, false otherwise</wsdl:documentation>
+      <wsdl:input message="tns:GetFlightPromoPriceExistsSoapIn" />
+      <wsdl:output message="tns:GetFlightPromoPriceExistsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="IsCruiseInImmediateConfirmForFare">
+      <wsdl:documentation xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">Return true if cruise is in ImmediateConfirm, false otherwise</wsdl:documentation>
+      <wsdl:input message="tns:IsCruiseInImmediateConfirmForFareSoapIn" />
+      <wsdl:output message="tns:IsCruiseInImmediateConfirmForFareSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="AvailabilitySoap" type="tns:AvailabilitySoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListAvailableCruises">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableCruises" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListAvailableCruisesAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListAvailableCruisesPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAutomaticDiscounts">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAutomaticDiscounts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListAutomaticDiscountsAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListAutomaticDiscountsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllDestinations">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAllDestinations" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListAllDestinationsAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListAllDestinationsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllShips">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAllShips" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListAllShipsAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListAllShipsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllPorts">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAllPorts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListAllPortsAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListAllPortsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListShips">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListShips" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListShipsAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListShipsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPorts">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListPorts" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListPortsAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListPortsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListFares">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListFares" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListFaresAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListFaresPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCabins">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableCabins" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListAvailableCabinsAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListAvailableCabinsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCabinsWithGroupBooking">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableCabinsWithGroupBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListAvailableCabinsWithGroupBookingAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListAvailableCabinsWithGroupBookingPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCategories">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableCategories" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListAvailableCategoriesAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListAvailableCategoriesPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCategoriesWithGroupBooking">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableCategoriesWithGroupBooking" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListAvailableCategoriesWithGroupBookingAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListAvailableCategoriesWithGroupBookingPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableSpecialServices">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableSpecialServices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListAvailableSpecialServicesAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListAvailableSpecialServicesPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCruise">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/GetCruise" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetCruiseAgency" part="Agency" use="literal" />
+        <soap:header message="tns:GetCruisePartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDocuments">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListDocuments" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:ListDocumentsAgency" part="Agency" use="literal" />
+        <soap:header message="tns:ListDocumentsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightPromoPriceExists">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/GetFlightPromoPriceExists" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:GetFlightPromoPriceExistsAgency" part="Agency" use="literal" />
+        <soap:header message="tns:GetFlightPromoPriceExistsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCruiseInImmediateConfirmForFare">
+      <soap:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/IsCruiseInImmediateConfirmForFare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+        <soap:header message="tns:IsCruiseInImmediateConfirmForFareAgency" part="Agency" use="literal" />
+        <soap:header message="tns:IsCruiseInImmediateConfirmForFarePartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="AvailabilitySoap12" type="tns:AvailabilitySoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="ListAvailableCruises">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableCruises" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListAvailableCruisesAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListAvailableCruisesPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAutomaticDiscounts">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAutomaticDiscounts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListAutomaticDiscountsAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListAutomaticDiscountsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllDestinations">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAllDestinations" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListAllDestinationsAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListAllDestinationsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllShips">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAllShips" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListAllShipsAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListAllShipsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAllPorts">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAllPorts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListAllPortsAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListAllPortsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListShips">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListShips" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListShipsAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListShipsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListPorts">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListPorts" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListPortsAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListPortsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListFares">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListFares" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListFaresAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListFaresPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCabins">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableCabins" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListAvailableCabinsAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListAvailableCabinsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCabinsWithGroupBooking">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableCabinsWithGroupBooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListAvailableCabinsWithGroupBookingAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListAvailableCabinsWithGroupBookingPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCategories">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableCategories" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListAvailableCategoriesAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListAvailableCategoriesPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableCategoriesWithGroupBooking">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableCategoriesWithGroupBooking" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListAvailableCategoriesWithGroupBookingAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListAvailableCategoriesWithGroupBookingPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListAvailableSpecialServices">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListAvailableSpecialServices" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListAvailableSpecialServicesAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListAvailableSpecialServicesPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetCruise">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/GetCruise" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetCruiseAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:GetCruisePartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListDocuments">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/ListDocuments" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:ListDocumentsAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:ListDocumentsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFlightPromoPriceExists">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/GetFlightPromoPriceExists" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:GetFlightPromoPriceExistsAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:GetFlightPromoPriceExistsPartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="IsCruiseInImmediateConfirmForFare">
+      <soap12:operation soapAction="http://schemas.costacrociere.com/WebAffiliation/IsCruiseInImmediateConfirmForFare" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+        <soap12:header message="tns:IsCruiseInImmediateConfirmForFareAgency" part="Agency" use="literal" />
+        <soap12:header message="tns:IsCruiseInImmediateConfirmForFarePartner" part="Partner" use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Availability">
+    <wsdl:port name="AvailabilitySoap" binding="tns:AvailabilitySoap">
+      <soap:address location="http://www.costaclick.net/WAWS_1_9/Availability.asmx" />
+    </wsdl:port>
+    <wsdl:port name="AvailabilitySoap12" binding="tns:AvailabilitySoap12">
+      <soap12:address location="http://www.costaclick.net/WAWS_1_9/Availability.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

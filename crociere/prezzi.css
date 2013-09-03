@@ -1,0 +1,187 @@
+﻿body 
+{
+    font-family: arial;
+    font-size:small;
+}
+
+#dettaglioprezzi
+{
+    float:left
+}
+
+#dettaglioprezzi ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+
+
+#dettaglioprezzi li
+{
+    width:688px;
+	height:33px;
+	margin:0;
+	padding:0;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+
+.Cl1, .Cl2, .Cl3, .Cl4, .Cl5, .Cl6, .Cl7
+{
+	position:absolute;
+}
+
+.Cl1
+{
+	margin: 3px 0 0 0;
+	font-weight:bold;
+	color: #067788;
+	width:50px;
+	text-align:right
+
+}
+
+.Cl2
+{
+	margin: 3px 0 0 60px;
+}
+
+.Cl3
+{
+	margin:3px 0 0 365px;
+	width: 75px;
+	text-align:right;
+}
+
+.Cl4
+{
+	margin: 3px 0 0 350px;
+}
+
+.Cl5
+{
+	margin: 3px 0 0 405px;
+}
+
+.Cl6
+{
+    margin: 7px 0 0 370px;
+}
+
+
+.Cl7
+{
+    margin: 7px 0 0 98px;
+}
+
+#divprezzi
+{
+    width:715px; 
+    min-height:170px;
+}
+
+.Co0, .Co00, .Co000, .Co1, .Co11, .Co2, .Co22, .Co3, .Co33, .Co44, .Co222, .Co333, .Co444
+{
+    position:absolute;    
+    font-size:small;
+}
+
+
+.Co0, .Co0t
+{
+    margin: 10px 0 0 0;   
+    font-weight:bold;  
+    width:25px;
+    text-align:center;
+}
+
+.Co00
+{
+    margin: 0px 0 0 0;   
+}
+
+.Co000
+{
+    margin: 1px 0 0 22px;   
+    text-align:right;
+    width:60px;       
+    padding:5px 15px 5px 5px;
+    height:15px;
+}
+
+.Co222, .Co333, .Co444
+{
+      Font-size:x-small;
+      color: #ffffff;
+      font-weight:bold;
+}
+
+.Co222
+{
+    margin: 10px 0 0 300px;       
+}
+
+.Co333
+{
+    margin: 10px 0 0 450px;       
+}
+
+.Co444
+{
+    margin: 10px 0 0 590px;       
+}
+
+
+.Co1, .Co1t
+{
+    margin: 10px 0 0 40px;   
+}
+
+.Co11
+{
+    margin: 10px 0 0 45px;   
+}
+
+.Co2, .Co2t
+{
+    margin: 1px 0 0 295px;    
+    text-align:right;
+    width:60px;       
+    padding:5px 15px 5px 5px;
+    height:15px;
+}
+
+.Co22
+{
+    margin: 10px 0 0 285px;   
+    text-align: right;
+    width: 80px;
+   
+}
+
+.Co33
+{
+    margin: 0px 0 0 415px;   
+    padding:10px 40px 0 0 ;
+    text-align: right;
+    width: 90px;
+    border-right: 4px solid #ffffff;
+    border-left: 4px solid #ffffff;
+    height:30px;
+    
+}
+
+.Co44
+{
+    margin: 10px 0 0 565px;   
+    text-align: right;
+    width: 80px;
+}
+
+.Co3
+{
+    font-size:x-small;
+    
+}
+

@@ -1,0 +1,114 @@
+﻿body 
+{
+    font-family: Arial;
+    font-size:small;
+}
+
+#dettaglioiti ul, #dettaglioiti2 ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+
+
+#dettaglioiti li, #dettaglioiti2 li
+{
+    width:430px;
+	height:22px;
+	margin:0;
+	padding:0;
+	border-bottom: 1px solid #dcdcdc;
+}
+
+
+
+
+.Cl1, .Cl2, .Cl3, .Cl4, .Cl5, .Cl22, .Cl6, .Cl11, .Cl33, .Cl44, .Cl55
+{
+	position:absolute;
+}
+
+.Cl1
+{
+	margin: 3px 0 0 5px;
+	font-weight:bold;
+	color: #067788;
+}
+.Cl11, .Cl33, .Cl44, .Cl55
+{
+	font-size: x-small;
+	font-weight:bold;
+	color: #067788;	
+}
+.Cl11
+{
+    margin: 3px 0 0 5px;
+}
+.Cl33
+{
+    margin: 3px 0 0 100px;
+}
+.Cl44
+{
+    margin: 3px 0 0 350px;
+}
+.Cl55
+{
+    margin: 3px 0 0 393px;
+}
+.Cl2
+{
+	margin: 3px 0 0 80px;
+}
+
+.Cl3
+{
+	margin:3px 0 0 100px;
+}
+
+.Cl4
+{
+	margin: 3px 0 0 350px;
+}
+
+.Cl5
+{
+	margin: 3px 0 0 395px;
+}
+
+.Cl22
+{
+	margin: 3px 0 0 60px;
+}
+
+.Cl6
+{
+	margin: 9px 0 0 550px;
+	color: #ffffff;
+	font-size:medium;
+	    
+}
+
+#divimage, #divimage2
+{
+    position:absolute;
+    margin: 0 0 0 438px;    
+}
+
+#diviti, #diviti2
+{
+    width:715px; 
+    min-height:170px;
+}
+
+#titolo
+{
+    height:36px;
+    width:688px;
+    background: url(../images/sfondo-delimita.gif) no-repeat right;
+    border-bottom: 1px solid #10AAC6;
+    margin: 0 0 10px 0;
+ font-weight:bold;
+}
+

@@ -1,0 +1,38 @@
+﻿body 
+{
+    font-family: Arial, Times New Roman;
+}
+
+
+#dettaglionave ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;	
+}
+
+#dettaglionave li img
+{
+    float:left;
+    margin-right: 10px;
+    
+}
+
+#dettaglionave
+{
+    text-align:justify;
+}
+
+#dettaglionave li
+{
+    width: 670px;
+    height:130px;
+    padding: 5px 0 5px 0;
+    border-bottom:1px solid #dcdcdc;
+}
+
+#dettaglionave li b
+{
+    margin:0px;
+    padding:0px;
+}
