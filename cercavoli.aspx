@@ -5,7 +5,7 @@
 <head>
     <title>fersinaviaggi.it: crociere MSC, COSTA, ROYAL CARIBBEAN e vacanze in barca a vela</title>
     <link rel="stylesheet" href="fersina.css?id=1" type="text/css" />
-    <link rel="stylesheet" href="cercavoli.css?id=1" type="text/css" />
+    <link rel="stylesheet" href="cercavoli/cercavoli.css?id=1" type="text/css" />
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" type="text/css" />
     <meta name="Keywords" content="Fersina Viaggi, viaggi Fersina, crociere, crociere MSC, crociere Costa, crociere Royal Caribbean, offerte crociere, vacanze barca vela, barca vela" />		
     <meta name="Description" content="Agenzia Fersina Viaggi di Trento, prenota online crociere MSC, Costa Crociere e Royal Caribbean o le vacanze in barca a vela." />
@@ -58,19 +58,73 @@
 	                        <li id="riga4" runat="server"><a href="crociere/crociere.aspx?promo=1" ><img src="images/risparmiasubitocosta.jpg" alt="risparmia subito con Costa Crociere da € 169,00" style="border:none;" /></a></li>
                         </ul>                        
             </div>            
-            <div id="ricerca">
+            <div id="search">
             <form>
                <div class="ui-widget">
-                 <label for="fly_from">Da: </label>
+                 <label for="fly_from">Partenza: </label>
                  <input id="fly_from" name="fly_from" />
                  <input type="hidden" id="fly_from_code" name="fly_from_code" />
+                 <label for="fly_to">Destinazione: </label>
+                 <input id="fly_to" name="fly_to" />
+                 <input type="hidden" id="fly_to_code" name="fly_to_code" />
+                 <label for="fly_outward">Andata: </label>
+                 <input id="fly_outward" name="fly_outward" />
+                 <label for="fly_return">Ritorno: </label>
+                 <input id="fly_return" name="fly_return" value="Sola andata"/>
+                 <div>
+                 <label for="adult">Adulti:</label>
+                 <select id="adult">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                 </select>
+                 </div>
+                 <div>
+                 <label for="children">Bambini:</label>
+                 <select id="children">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                 </select>
+                 </div>
+                 <div>
+                 <label for="enfant">Neonati:</label>
+                 <select id="enfant">
+                    <option>0</option>
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                    <option>4</option>
+                    <option>5</option>
+                    <option>6</option>
+                    <option>7</option>
+                    <option>8</option>
+                    <option>9</option>
+                    <option>10</option>
+                 </select>
+                 </div>
                </div>
+               <button type="submit">Cerca Volo</button>
             </form>
             </div>
-            <div id="barra">
-                <img src="images/sfondo-barra.gif" alt="le migliore compagnie di navi da crociera" />
+            <div id="results">
+            <!-- #include file ="cercavoli\results.aspx" -->
             </div>
-
         </div>
     </div>
     <div id="bottom" style="width:100%; margin-top:140px; height:60px; background:#AD1063; border-top:#EA7DB6 solid 5px;">
@@ -87,6 +141,7 @@
 </body>
 <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
 <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
-<script type="text/javascript" src="cercavoli.js?id=1"></script>
+<script src="jquery.ui.datepicker-it.js"></script>
+<script type="text/javascript" src="cercavoli/cercavoli.js?id=1"></script>
 <script type="text/javascript" src="slide.js?id=1"></script>
 </html>

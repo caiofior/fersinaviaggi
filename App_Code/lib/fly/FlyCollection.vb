@@ -14,10 +14,10 @@ Namespace Libray.Fly
         Sub LoadAll(ByVal filters As NameValueCollection)
             filters.Add("limit", "10")
             Dim sql As String
-            sql = "SELECT * FROM city "
+            sql = "SELECT * FROM airport "
             If filters.Get("term") <> "" Then
                 sql = sql + " WHERE name LIKE """ + filters.Get("term") + "%"" OR "
-                sql = sql + " province LIKE """ + filters.Get("term") + "%"" OR "
+                sql = sql + " city LIKE """ + filters.Get("term") + "%"" OR "
                 sql = sql + " iata LIKE """ + filters.Get("term") + "%"""
             End If
             sql = sql + " ORDER BY country=""Italy"" DESC"
