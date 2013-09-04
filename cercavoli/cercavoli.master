@@ -48,15 +48,6 @@
                     <li style="border-right:none"><a href="#" title="Viaggi di capodanno">Capodanno</a></li>
                </ul>
             </div> 
-            <div id="immagini">
-                        <ul class="ppt">
-	                        <li id="riga1" runat="server"><a href="crociere/crociere.aspx?promo=15" ><img src="images/partycrociera.jpg" alt="Party in Crociera" style="border:none;" /></a></li>                            
-                            <li id="riga2" runat="server"><a href="crociere/crociere.aspx?promo=14" ><img src="images/prontivia.jpg" alt="Last Minute di Costa Crociere" style="border:none;" /></a></li>                            
-                            
-                            <li id="riga3" runat="server"><a href="crociere/crociere.aspx?promo=8" ><img src="images/roulettecosta.jpg" alt="Roulette Costa Crociere" style="border:none;" /></a></li>
-	                        <li id="riga4" runat="server"><a href="crociere/crociere.aspx?promo=1" ><img src="images/risparmiasubitocosta.jpg" alt="risparmia subito con Costa Crociere da € 169,00" style="border:none;" /></a></li>
-                        </ul>                        
-            </div>            
             <div id="search">
             <form id="Form1" runat="server">
                <div class="ui-widget">

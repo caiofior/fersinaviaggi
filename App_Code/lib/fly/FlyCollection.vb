@@ -32,7 +32,10 @@ Namespace Libray.Fly
         Private Function createSQL(ByVal filters As NameValueCollection) As String
             filters.Add("limit", "10")
             Dim sql As String
-            sql = "SELECT * FROM " + _tablename + " "
+            sql = "SELECT * "
+            sql = sql + " , (SELECT name FROM airport WHERE airport.iata=" + _tablename + ".departure_location_info) AS departure_location_name"
+            sql = sql + " , (SELECT name FROM airport WHERE airport.iata=" + _tablename + ".arrival_location_info) AS arrival_location_name"
+            sql = sql + " FROM " + _tablename + " "
             sql = sql + " LIMIT " + CInt(filters.Get("limit")).ToString
             Return sql
         End Function
