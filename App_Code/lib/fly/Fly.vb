@@ -3,7 +3,7 @@ Imports MySql.Data.MySqlClient
 Imports Libray.Core
 
 Namespace Libray.Fly
-    Public Class Airport
+    Public Class Fly
         Inherits Entity
         Sub New(ByVal connection As MySql.Data.MySqlClient.MySqlConnection)
             MyBase.New(connection)

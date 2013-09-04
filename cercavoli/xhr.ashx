@@ -11,7 +11,7 @@ Public Class CercaVoliXhr : Implements IHttpHandler
     Public Sub ProcessRequest(ByVal context As HttpContext) Implements IHttpHandler.ProcessRequest
         Dim task As String = context.Request.QueryString("task")
         Select Case task
-            Case "fly_from"
+            Case "departure_location_name"
                 context.Response.ContentType = "application/json"
                 Dim json As String = "[ "
                 Dim airportColl As New Libray.Fly.AirportCollection(connection)
@@ -40,7 +40,7 @@ Public Class CercaVoliXhr : Implements IHttpHandler
                 
                 json = json & " ]"
                 context.Response.Write(json)
-            Case "fly_to"
+            Case "arrival_location_name"
                 context.Response.ContentType = "application/json"
                 Dim json As String = "[ "
                 Dim airportColl As New Libray.Fly.AirportCollection(connection)

@@ -1,8 +1,8 @@
-﻿$("#fly_from").autocomplete({
-    source: "cercavoli/xhr.ashx?task=fly_from&fly_to_val=" + $("#fly_to_code").val(),
+﻿$("#departure_location_name").autocomplete({
+    source: "cercavoli/xhr.ashx?task=departure_location_name&arrival_location_info=" + $("#arrival_location_info").val(),
     minChars: 0,
     select: function (event, ui) {
-        $("#fly_from_code").val(ui.item.value);
+        $("#departure_location_info").val(ui.item.value);
         $(this).val(ui.item.label);
         return false;
     }
@@ -11,11 +11,11 @@
     if (val == "") val = "a"
     $(this).autocomplete("search", val);
 });    ;
-$("#fly_to").autocomplete({
-    source: "cercavoli/xhr.ashx?task=fly_to&fly_from_val=" + $("#fly_from_code").val(),
+$("#arrival_location_name").autocomplete({
+    source: "cercavoli/xhr.ashx?task=arrival_location_name&departure_location_info=" + $("#departure_location_info").val(),
     minChars: 0,
     select: function (event, ui) {
-        $("#fly_to_code").val(ui.item.value);
+        $("#arrival_location_info").val(ui.item.value);
         $(this).val(ui.item.label);
         return false;
     }
@@ -29,4 +29,14 @@ options["minDate"] = "+1";
 options["dateFormat"] = 'dd MM yy';
 $("#fly_outward").datepicker(options);
 $("#fly_return").datepicker(options);
+$("#fly_search_form").submit(function () {
+    $.ajax({
+        url: "cercavoli/results.aspx",
+        data: $(this).serialize(),
+        success: function (data) {
+            $("#fly_search_results").html(data);
+        }
+    })
+    return false;
+})
 

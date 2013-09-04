@@ -49,18 +49,18 @@
                </ul>
             </div> 
             <div id="search">
-            <form id="Form1" runat="server">
+            <form id="fly_search_form" action"cercavoli.aspx">
                <div class="ui-widget">
-                 <label for="fly_from">Partenza: </label>
-                 <input id="fly_from" name="fly_from" />
-                 <input type="hidden" id="fly_from_code" name="fly_from_code" />
-                 <label for="fly_to">Destinazione: </label>
-                 <input id="fly_to" name="fly_to" />
-                 <input type="hidden" id="fly_to_code" name="fly_to_code" />
-                 <label for="fly_outward">Andata: </label>
-                 <input id="fly_outward" name="fly_outward" />
-                 <label for="fly_return">Ritorno: </label>
-                 <input id="fly_return" name="fly_return" value="Sola andata"/>
+                 <label for="departure_location_name">Partenza: </label>
+                 <input id="departure_location_name" name="departure_location_name" />
+                 <input type="hidden" id="departure_location_info" name="departure_location_info" />
+                 <label for="arrival_location_name">Destinazione: </label>
+                 <input id="arrival_location_name" name="arrival_location_name" />
+                 <input type="hidden" id="arrival_location_info" name="arrival_location_info" />
+                 <label for="departure_datetime">Andata: </label>
+                 <input id="departure_datetime" name="departure_datetime" />
+                 <label for="arrival_datetime">Ritorno: </label>
+                 <input id="arrival_datetime" name="arrival_datetime" value="Sola andata"/>
                  <div>
                  <label for="adult">Adulti:</label>
                  <select id="adult">
@@ -112,7 +112,9 @@
                <button type="submit">Cerca Volo</button>
             </form>
             </div>
+            <div id="fly_search_results">
             <asp:contentplaceholder id="Results" runat="server" />
+            </div>
         </div>
     </div>
     <div id="bottom" style="width:100%; margin-top:140px; height:60px; background:#AD1063; border-top:#EA7DB6 solid 5px;">
