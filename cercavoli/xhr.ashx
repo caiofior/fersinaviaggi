@@ -14,58 +14,58 @@ Public Class CercaVoliXhr : Implements IHttpHandler
             Case "fly_from"
                 context.Response.ContentType = "application/json"
                 Dim json As String = "[ "
-                Dim flyColl As New Libray.Fly.FlyCollection(connection)
+                Dim airportColl As New Libray.Fly.AirportCollection(connection)
                 Dim filter As NameValueCollection = New NameValueCollection(context.Request.QueryString)
-                flyColl.LoadAll(filter)
-                Dim flyItems As Queue
-                flyItems = flyColl.getItems
-                Dim fly As Fly
-                Dim flyCount As Integer = 0
-                For Each fly In flyItems
-                    If flyCount > 0 Then
+                airportColl.LoadAll(filter)
+                Dim airportItems As Queue
+                airportItems = airportColl.getItems
+                Dim airport As Airport
+                Dim airportCount As Integer = 0
+                For Each airport In airportItems
+                    If airportCount > 0 Then
                         json = json + ","
                     End If
                     json = json + " { ""label"": "
-                    json = json + """" + fly.getData("name") + " "
-                    If (fly.getData("iata") <> "") Then
-                        json = json + "(" & fly.getData("iata") + ") "
+                    json = json + """" + airport.getData("name") + " "
+                    If (airport.getData("iata") <> "") Then
+                        json = json + "(" & airport.getData("iata") + ") "
                     End If
                     
-                    json = json + fly.getData("province") + " - " + fly.getData("country") + """"
+                    json = json + airport.getData("province") + " - " + airport.getData("country") + """"
                     json = json + " , ""value"": "
-                    json = json + """" & fly.getData("iata") & """"
+                    json = json + """" & airport.getData("iata") & """"
                     json = json + " } " & vbCrLf
-                    flyCount = flyCount + 1
-                Next fly
+                    airportCount = airportCount + 1
+                Next airport
                 
                 json = json & " ]"
                 context.Response.Write(json)
             Case "fly_to"
                 context.Response.ContentType = "application/json"
                 Dim json As String = "[ "
-                Dim flyColl As New Libray.Fly.FlyCollection(connection)
+                Dim airportColl As New Libray.Fly.AirportCollection(connection)
                 Dim filter As NameValueCollection = New NameValueCollection(context.Request.QueryString)
-                flyColl.LoadAll(filter)
-                Dim flyItems As Queue
-                flyItems = flyColl.getItems
-                Dim fly As Fly
-                Dim flyCount As Integer = 0
-                For Each fly In flyItems
-                    If flyCount > 0 Then
+                airportColl.LoadAll(filter)
+                Dim airportItems As Queue
+                airportItems = airportColl.getItems
+                Dim airport As Airport
+                Dim airportCount As Integer = 0
+                For Each airport In airportItems
+                    If airportCount > 0 Then
                         json = json + ","
                     End If
                     json = json + " { ""label"": "
-                    json = json + """" + fly.getData("name") + " "
-                    If (fly.getData("iata") <> "") Then
-                        json = json + "(" & fly.getData("iata") + ") "
+                    json = json + """" + airport.getData("name") + " "
+                    If (airport.getData("iata") <> "") Then
+                        json = json + "(" & airport.getData("iata") + ") "
                     End If
                     
-                    json = json + fly.getData("province") + " - " + fly.getData("country") + """"
+                    json = json + airport.getData("province") + " - " + airport.getData("country") + """"
                     json = json + " , ""value"": "
-                    json = json + """" & fly.getData("iata") & """"
+                    json = json + """" & airport.getData("iata") & """"
                     json = json + " } " & vbCrLf
-                    flyCount = flyCount + 1
-                Next fly
+                    airportCount = airportCount + 1
+                Next airport
                 
                 json = json & " ]"
                 context.Response.Write(json)
