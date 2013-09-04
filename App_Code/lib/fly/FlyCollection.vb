@@ -21,9 +21,18 @@ Namespace Libray.Fly
             sql = sql + " , (SELECT name FROM airport WHERE airport.iata=" + _tablename + ".departure_location_info) AS departure_location_name"
             sql = sql + " , (SELECT name FROM airport WHERE airport.iata=" + _tablename + ".arrival_location_info) AS arrival_location_name"
             sql = sql + " FROM " + _tablename + " WHERE TRUE "
+
             If filters.Get("departure_location_info") <> "" Then
                 sql = sql + " AND " + _tablename + ".departure_location_info=""" + Util.sqlSanitize(filters.Get("departure_location_info")) + """"
             End If
+
+            If filters.Get("departure_datetime") <> "" Then
+                Dim datetime As String
+                datetime = Util.parseDatepicker(filters.Get("departure_datetime"))
+                sql = sql + " AND " + _tablename + ".departure_datetime>""" + Util.sqlSanitize(datetime) + " 00:00:00"""
+                sql = sql + " AND " + _tablename + ".departure_datetime<""" + Util.sqlSanitize(datetime) + " 23:59:59"""
+            End If
+
             Return sql
         End Function
     End Class

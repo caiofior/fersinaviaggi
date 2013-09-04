@@ -38,7 +38,16 @@ options = $.datepicker.regional["it"];
 options["minDate"] = "+1";
 options["dateFormat"] = 'dd MM yy';
 $("#departure_datetime").datepicker(options);
-$("#arrival_datetime").datepicker(options);
+$("#arrival_datetime").datepicker(options).change(function () {
+    if ($(this).val() != "Sola andata")
+        $("#reset_oneway").show();
+    else
+        $("#reset_oneway").hide();
+});
+$("#reset_oneway").click(function () {
+    $(this).hide();
+    $("#arrival_datetime").val("Sola andata");
+});
 $("#fly_search_form").submit(function () {
     $.ajax({
         url: "cercavoli/results.aspx",
@@ -48,5 +57,4 @@ $("#fly_search_form").submit(function () {
         }
     })
     return false;
-})
-
+});

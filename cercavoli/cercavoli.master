@@ -69,6 +69,7 @@
                  <div>
                  <label for="arrival_datetime">Ritorno: </label>
                  <input id="arrival_datetime" name="arrival_datetime" value="Sola andata"/>
+                 <a id="reset_oneway" style="display:none;" href="#">Sola andata</a>
                  </div>
                  <div>
                  <label for="adult">Adulti:</label>
