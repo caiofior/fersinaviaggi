@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Libray.Fly.Airport" Collapsed="true">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\lib\fly\Airport.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Libray.Fly.Fly" Collapsed="true">
+    <Position X="2.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\lib\fly\Fly.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Libray.Fly.FlyCollection" Collapsed="true">
+    <Position X="4.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAIAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>App_Code\lib\fly\FlyCollection.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Libray.Fly.AirportCollection" Collapsed="true">
+    <Position X="8.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAIAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>App_Code\lib\fly\AirportCollection.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Libray.Core.Entity" Collapsed="true">
+    <Position X="3.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEQAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAA=</HashCode>
+      <FileName>App_Code\lib\core\Entity.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Libray.Core.EntityCollection" Collapsed="true">
+    <Position X="5.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAIAACBAAAAAAAAIAAAAABAE=</HashCode>
+      <FileName>App_Code\lib\core\EntityCollection.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Libray.Core.Util" Collapsed="true">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App_Code\lib\core\Util.vb</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

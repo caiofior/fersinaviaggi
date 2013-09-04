@@ -1,2 +1,76 @@
-﻿body {
+﻿#fly_search 
+{
+    background-color:#EA7DB6;
+    float:left;
+    width:250px;
+}
+#fly_search label
+{
+    float:left;
+    display:block;
+    width:120px;
+}
+#fly_search input 
+{
+    display:block;
+    width:100px;
+}
+#fly_search select
+{
+    display:block;
+    width:40px;
+}
+#fly_search button
+{
+    float:left;
+    display:block;
+    margin-left:50px;
+    width:150px;
+    background-color:#AD1063;
+}
+#fly_search div 
+{
+    margin-top:5px;
+}
+#fly_search_results 
+{
+    margin-top: 5px;
+    margin-left: 0px;
+    float:left;
+}
+#fly_container 
+{
+    min-height:350px;
+}
+#fly_search_results .resultheader span,
+#fly_search_results .resultfooter span
+{
+    font-weight:bold;
+}
+#fly_search_results .resultheader span,
+#fly_search_results .resultsrow span,
+#fly_search_results .resultfooter span
+{
+    display:block;
+    float:left;
+    width:100px;
+    height:40px;
+    margin-left:5px;
+}
+#fly_search_results .resultheader .odd,
+#fly_search_results .resultsrow .odd,
+#fly_search_results .resultfooter .odd 
+{
+    background-color:#EA7DB6;
+}
+#fly_search_results .resultheader .even,
+#fly_search_results .resultsrow .even,
+#fly_search_results .resultfooter .even 
+{
+    background-color:#AD1063;
+}
+#fly_search_results .resultheader,
+#fly_search_results .resultsrow 
+{
+    padding-bottom:45px;
 }

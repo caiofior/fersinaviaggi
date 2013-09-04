@@ -13,7 +13,6 @@ Namespace Libray.Core
         Public Function getData(ByVal field As String) As String
             Return _data.Get(field)
         End Function
-
     End Class
 End Namespace
 

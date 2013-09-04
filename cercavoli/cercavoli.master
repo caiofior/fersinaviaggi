@@ -47,20 +47,29 @@
                     <li><a href="#" title="Vacanze in barca a vela">Oktoberfest</a></li>
                     <li style="border-right:none"><a href="#" title="Viaggi di capodanno">Capodanno</a></li>
                </ul>
-            </div> 
-            <div id="search">
-            <form id="fly_search_form" action"cercavoli.aspx">
+            </div>
+            <div id="fly_container">
+            <div id="fly_search">
+            <form id="fly_search_form" method="post" action="cercavoli.aspx" >
                <div class="ui-widget">
+                <div>
                  <label for="departure_location_name">Partenza: </label>
                  <input id="departure_location_name" name="departure_location_name" />
                  <input type="hidden" id="departure_location_info" name="departure_location_info" />
+                </div>
+                <div>
                  <label for="arrival_location_name">Destinazione: </label>
                  <input id="arrival_location_name" name="arrival_location_name" />
                  <input type="hidden" id="arrival_location_info" name="arrival_location_info" />
+                 </div>
+                 <div>
                  <label for="departure_datetime">Andata: </label>
                  <input id="departure_datetime" name="departure_datetime" />
+                 </div>
+                 <div>
                  <label for="arrival_datetime">Ritorno: </label>
                  <input id="arrival_datetime" name="arrival_datetime" value="Sola andata"/>
+                 </div>
                  <div>
                  <label for="adult">Adulti:</label>
                  <select id="adult">
@@ -109,11 +118,14 @@
                  </select>
                  </div>
                </div>
+               <div>
                <button type="submit">Cerca Volo</button>
+               </div>
             </form>
             </div>
             <div id="fly_search_results">
             <asp:contentplaceholder id="Results" runat="server" />
+            </div>
             </div>
         </div>
     </div>
@@ -128,10 +140,10 @@
                </ul>
             </div> 
     </div>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
+    <script type="text/javascript" src="jquery.ui.datepicker-it.js"></script>
+    <script type="text/javascript" src="cercavoli/cercavoli.js?id=1"></script>
+    <script type="text/javascript" src="slide.js?id=1"></script>
 </body>
-<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-<script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script> 
-<script src="jquery.ui.datepicker-it.js"></script>
-<script type="text/javascript" src="cercavoli/cercavoli.js?id=1"></script>
-<script type="text/javascript" src="slide.js?id=1"></script>
 </html>
