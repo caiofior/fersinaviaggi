@@ -1,5 +1,4 @@
 ﻿<% @ Page Language="VB" MasterPageFile="cercavoli\cercavoli.master" CodeFile="cercavoli.aspx.vb" Inherits="FlySearch" Title="Content Page 1" %>
-<% @ Register TagPrefix="fc" TagName="Results" Src="cercavoli\results.ascx" %>
 <asp:Content ID="Results" ContentPlaceHolderID="Results" Runat="Server">
-    <fc:Results id="ResultsTable" runat="server" />
+<img class="main_image" alt="Vola con noi" title="Vola con noi" src="cercavoli/images/fly.jpg" width="700" height="242"/>
 </asp:Content>

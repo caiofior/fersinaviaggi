@@ -49,12 +49,15 @@ $("#reset_oneway").click(function () {
     $("#arrival_datetime").val("Sola andata");
 });
 $("#fly_search_form").submit(function () {
-    $.ajax({
-        url: "cercavoli/results.aspx",
-        data: $(this).serialize(),
-        success: function (data) {
-            $("#fly_search_results").html(data);
-        }
-    })
-    return false;
+    status = true
+    if ($("#departure_location_info").val() == "") {
+        status = false;
+    }
+    if ($("#arrival_location_info").val() == "") {
+        status = false;
+    }
+    if ($("#departure_datetime").val() == "") {
+        status = false;
+    }
+    return status;
 });

@@ -1,6 +1,7 @@
 ﻿#fly_search 
 {
-    background-color:#EA7DB6;
+    
+    background-color:#109EB5;
     float:left;
     width:250px;
 }
@@ -26,7 +27,7 @@
     display:block;
     margin-left:50px;
     width:150px;
-    background-color:#AD1063;
+    background-color:#1D7884;
     margin-bottom:5px;
 }
 #fly_search div 
@@ -38,6 +39,11 @@
     margin-top: 5px;
     margin-left: 0px;
     float:left;
+}
+#fly_search_results .main_image 
+{
+    margin-top: 2px;
+    margin-left: 5px;
 }
 #fly_container 
 {
@@ -62,13 +68,13 @@
 #fly_search_results .resultsrow .odd,
 #fly_search_results .resultfooter .odd 
 {
-    background-color:#EA7DB6;
+    background-color:#109EB5;
 }
 #fly_search_results .resultheader .even,
 #fly_search_results .resultsrow .even,
 #fly_search_results .resultfooter .even 
 {
-    background-color:#AD1063;
+    background-color:#1D7884;
 }
 #fly_search_results .resultheader,
 #fly_search_results .resultsrow 
