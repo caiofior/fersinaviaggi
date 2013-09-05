@@ -1,5 +1,7 @@
 ﻿Imports Microsoft.VisualBasic
 Imports MySql.Data.MySqlClient
+Imports System.Collections.Specialized
+
 Namespace Libray.Core
     Public MustInherit Class Entity
         Protected _connection As MySql.Data.MySqlClient.MySqlConnection

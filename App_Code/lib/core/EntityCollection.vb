@@ -1,5 +1,7 @@
 ﻿Imports Microsoft.VisualBasic
 Imports MySql.Data.MySqlClient
+Imports System.Collections.Specialized
+
 Namespace Libray.Core
     Public MustInherit Class EntityCollection
         Protected _items As New Queue

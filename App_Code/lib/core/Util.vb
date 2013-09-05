@@ -1,4 +1,6 @@
-﻿Imports Microsoft.VisualBasic
+﻿Imports System.Xml
+Imports Microsoft.VisualBasic
+Imports System.Collections.Specialized
 Namespace Libray.Core
     Public Class Util
         Shared Function sqlSanitize(ByVal text As String) As String
@@ -29,6 +31,21 @@ Namespace Libray.Core
             'System.Web.HttpContext.Current.Response.Write(text)
 
             Return text
+        End Function
+        Shared Function parseWebConfig(ByVal filePath As String, ByVal keyName As String) As String
+            Dim xmlDocument As XmlDocument
+            Dim xmlNodeList As XmlNodeList
+            Dim xmlNode As XmlNode
+            Dim connectionString As String = ""
+            xmlDocument = New XmlDocument()
+            xmlDocument.Load("..\Web.config")
+            xmlNodeList = xmlDocument.SelectNodes("/configuration/appSettings/add")
+            For Each xmlNode In xmlNodeList
+                If xmlNode.Attributes.GetNamedItem("key").Value = "connvoli" Then
+                    connectionString = xmlNode.Attributes.GetNamedItem("value").Value
+                End If
+            Next
+            Return connectionString
         End Function
 
     End Class
