@@ -66,4 +66,4 @@ $("#fly_search_form").submit(function () {
     return status;
 });
 $("#fly_search,#fly_search .error").corner();
-$("#fly_search_results div span").corner();
+$("#fly_search_results div span,#fly_container h2,#fly_container #request_summary").corner();

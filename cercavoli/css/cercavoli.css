@@ -58,6 +58,22 @@
     font-size:0.9em;
     min-height:350px;
 }
+#fly_container h2 
+{
+    padding-left:5px;
+    background-color:#1D7884;
+}
+#fly_container p,
+#fly_container h3
+{
+    line-height:1;
+    margin:2px;
+}
+#request_summary 
+{
+    padding:5px;
+    background-color:#109EB5;
+}
 #fly_search_results .resultheader span,
 #fly_search_results .resultfooter span
 {
