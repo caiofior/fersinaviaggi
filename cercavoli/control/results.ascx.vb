@@ -9,6 +9,11 @@ Partial Class FlySearch_Results
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim flyCollection As New FlyCollection(connection)
         Dim filter As New NameValueCollection(Context.Request.QueryString)
+        If (filter.Count = 0) Then
+            filter = New NameValueCollection(Context.Request.Form)
+        End If
+
+        'System.Web.HttpContext.Current.Response.Write(filter.Count)
         'System.Web.HttpContext.Current.Response.Write(filter.Get("departure_location_info"))
         ResultsData.DataSource = flyCollection.getDataset(filter)
         ResultsData.DataBind()

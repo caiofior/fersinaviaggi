@@ -1,7 +1,7 @@
 ﻿<% @ Page Language="VB" MasterPageFile="master\cercavoli.master" CodeFile="default.aspx.vb" Inherits="FlySearch" Title="Content Page 1" %>
 <asp:Content ID="Results" ContentPlaceHolderID="Results" Runat="Server">
     <div id="fly_search">
-            <form id="fly_search_form" name="fly_search_form" method="get" action="results.aspx" >
+            <form id="fly_search_form" name="fly_search_form" method="post" action="results.aspx" >
                <div class="ui-widget">
                 <div>
                  <label for="departure_location_name">Partenza: </label>
