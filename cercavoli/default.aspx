@@ -1,7 +1,7 @@
 ﻿<% @ Page Language="VB" MasterPageFile="master\cercavoli.master" CodeFile="default.aspx.vb" Inherits="FlySearch" Title="Content Page 1" %>
 <asp:Content ID="Results" ContentPlaceHolderID="Results" Runat="Server">
-<div id="fly_search">
-            <form id="fly_search_form" name="fly_search_form" method="post" action="results.aspx" >
+    <div id="fly_search">
+            <form id="fly_search_form" name="fly_search_form" method="get" action="results.aspx" >
                <div class="ui-widget">
                 <div>
                  <label for="departure_location_name">Partenza: </label>
@@ -27,7 +27,7 @@
                  </div>
                  <div>
                  <label for="adult">Adulti:</label>
-                 <select id="adult">
+                 <select id="adult" name="adult">
                     <option>1</option>
                     <option>2</option>
                     <option>3</option>
@@ -42,7 +42,7 @@
                  </div>
                  <div>
                  <label for="children">Bambini:</label>
-                 <select id="children">
+                 <select id="children" name="children">
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>
@@ -58,7 +58,7 @@
                  </div>
                  <div>
                  <label for="enfant">Neonati:</label>
-                 <select id="enfant">
+                 <select id="enfant" name="enfant">
                     <option>0</option>
                     <option>1</option>
                     <option>2</option>

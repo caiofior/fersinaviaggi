@@ -13,6 +13,17 @@ Namespace Libray.Core
         Public Function getData(ByVal field As String) As String
             Return _data.Get(field)
         End Function
+        Public Sub loadFromSql(ByVal sql As String)
+            Dim command As New MySqlCommand(sql, _connection)
+            If _connection.State = ConnectionState.Closed Then _connection.Open()
+            Dim reader As MySqlDataReader = command.ExecuteReader(CommandBehavior.CloseConnection)
+            reader.Read()
+            For columCount As Integer = 0 To reader.FieldCount - 1
+                setData(reader.GetName(columCount).ToString, reader.GetValue(columCount).ToString)
+            Next
+            reader.Close()
+
+        End Sub
     End Class
 End Namespace
 

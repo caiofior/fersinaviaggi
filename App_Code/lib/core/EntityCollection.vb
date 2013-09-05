@@ -20,6 +20,7 @@ Namespace Libray.Core
                 Next
                 _items.Enqueue(item)
             End While
+            reader.Close()
         End Sub
         Public Function getDataset(ByVal filters As NameValueCollection) As DataSet
             Dim flyDataset As New DataSet()
