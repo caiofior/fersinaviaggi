@@ -1,5 +1,5 @@
 ﻿$("#departure_location_name").autocomplete({
-    source: "cercavoli/xhr.ashx?task=departure_location_name&arrival_location_info=" + $("#arrival_location_info").val(),
+    source: "xhr/xhr.ashx?task=departure_location_name&arrival_location_info=" + $("#arrival_location_info").val(),
     minChars: 0,
     select: function (event, ui) {
         $("#departure_location_info").val(ui.item.value);
@@ -17,7 +17,7 @@
     $(this).autocomplete("search", "a");
 });        ;
 $("#arrival_location_name").autocomplete({
-    source: "cercavoli/xhr.ashx?task=arrival_location_name&departure_location_info=" + $("#departure_location_info").val(),
+    source: "xhr/xhr.ashx?task=arrival_location_name&departure_location_info=" + $("#departure_location_info").val(),
     minChars: 0,
     select: function (event, ui) {
         $("#arrival_location_info").val(ui.item.value);
