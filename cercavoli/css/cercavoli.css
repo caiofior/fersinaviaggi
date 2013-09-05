@@ -1,9 +1,17 @@
 ﻿#fly_search 
 {
-    
     background-color:#109EB5;
     float:left;
     width:250px;
+}
+#fly_search span.error 
+{
+    margin-top:5px;
+    margin-bottom:5px;
+    padding-left:5px;
+    display:block;
+    width:245px;
+    background-color:#1D7884;
 }
 #fly_search label
 {
@@ -34,25 +42,26 @@
 {
     margin-top:5px;
 }
-#fly_search_results 
+#fly_search_results
 {
     margin-top: 5px;
     margin-left: 0px;
     float:left;
 }
-#fly_search_results .main_image 
+#fly_search_right_content .main_image 
 {
-    margin-top: 2px;
+    margin-top: 8px;
     margin-left: 5px;
 }
 #fly_container 
 {
+    font-size:0.9em;
     min-height:350px;
 }
 #fly_search_results .resultheader span,
 #fly_search_results .resultfooter span
 {
-    font-weight:bold;
+    padding-left:5px;
 }
 #fly_search_results .resultheader span,
 #fly_search_results .resultsrow span,
@@ -60,24 +69,48 @@
 {
     display:block;
     float:left;
-    width:100px;
+    width:95px;
     height:40px;
-    margin-left:5px;
+}
+#fly_search_results .pricerow span
+{
+    display:block;
+    float:left;
+    padding-left:5px;
+    width:395px;
+    height:20px;
+    background-color:#1D7884;
+    font-weight:bold;
 }
 #fly_search_results .resultheader .odd,
-#fly_search_results .resultsrow .odd,
-#fly_search_results .resultfooter .odd 
+#fly_search_results .resultsrow .odd
 {
+    padding-left:5px;
     background-color:#109EB5;
 }
 #fly_search_results .resultheader .even,
-#fly_search_results .resultsrow .even,
-#fly_search_results .resultfooter .even 
+#fly_search_results .resultsrow .even
 {
+    padding-left:5px;
     background-color:#1D7884;
 }
-#fly_search_results .resultheader,
-#fly_search_results .resultsrow 
+#fly_search_results .total_price 
 {
-    padding-bottom:45px;
+    font-weight:bold;
+    display:block;
+    float:left;
+    width:792px;
+    height:20px;
+    background-color:#1D7884;
+    padding-left:10px;
+    margin-bottom:2px;
+}
+#fly_search_results .separator 
+{
+    margin-left:2px;
+}
+#fly_search_results .resultheader,
+#fly_search_results .resultsrow
+{
+    clear:both;
 }

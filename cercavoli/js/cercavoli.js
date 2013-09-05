@@ -49,15 +49,21 @@ $("#reset_oneway").click(function () {
     $("#arrival_datetime").val("Sola andata");
 });
 $("#fly_search_form").submit(function () {
-    status = true
+    $("#fly_search_form span.error").hide();
+    var status = true;
     if ($("#departure_location_info").val() == "") {
+        $(".departure_location_name_error").show();
         status = false;
     }
     if ($("#arrival_location_info").val() == "") {
+        $(".arrival_location_name_error").show();
         status = false;
     }
     if ($("#departure_datetime").val() == "") {
+        $(".departure_datetime_error").show();
         status = false;
     }
     return status;
 });
+$("#fly_search,#fly_search .error").corner();
+$("#fly_search_results div span").corner();

@@ -20,6 +20,8 @@ Namespace Libray.Fly
             sql = "SELECT * "
             sql = sql + " , (SELECT name FROM airport WHERE airport.iata=" + _tablename + ".departure_location_info) AS departure_location_name"
             sql = sql + " , (SELECT name FROM airport WHERE airport.iata=" + _tablename + ".arrival_location_info) AS arrival_location_name"
+            sql = sql + " , (SELECT name FROM airport WHERE airport.iata=" + _tablename + ".return_departure_location_info) AS return_departure_location_name"
+            sql = sql + " , (SELECT name FROM airport WHERE airport.iata=" + _tablename + ".return_arrival_location_info) AS return_arrival_location_name"
             sql = sql + " FROM " + _tablename + " WHERE TRUE "
 
             If filters.Get("departure_location_info") <> "" Then

@@ -9,7 +9,7 @@ Partial Class FlySearch_Results
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim flyCollection As New FlyCollection(connection)
         Dim filter As New NameValueCollection(Context.Request.QueryString)
-        'System.Web.HttpContext.Current.Response.Write(filter.Get("departure_datetime"))
+        System.Web.HttpContext.Current.Response.Write("HI")
         ResultsData.DataSource = flyCollection.getDataset(filter)
         ResultsData.DataBind()
     End Sub
