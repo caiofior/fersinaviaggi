@@ -8,6 +8,7 @@ Partial Class Results
     Dim connection As New MySqlConnection(connectionString)
     Public departure As New Airport(connection)
     Public arrival As New Airport(connection)
+    Protected search As Search
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Dim filter As New NameValueCollection(Context.Request.QueryString)
         departure.loadFromIata(Request.Form("departure_location_info"))
@@ -27,7 +28,7 @@ Partial Class Results
             arrival_datetime.Text = Request.Form("arrival_datetime")
         End Try
         passengers.Text = Convert.ToInt32(Request.Form("adult")) + Convert.ToInt32(Request.Form("children")) + Convert.ToInt32(Request.Form("enfant"))
-        Dim search As New Search(connection)
+        search = New Search(connection)
         search.setData("departure_location_info", Request.Form("departure_location_info"))
         search.setData("arrival_location_info", Request.Form("arrival_location_info"))
 
@@ -47,11 +48,19 @@ Partial Class Results
         End Try
 
         search.setData("arrival_datetime", arrival_datetime_string)
-        search.setData("adult", Request.Form("adult"))
-        search.setData("children", Request.Form("children"))
-        search.setData("enfant", Request.Form("enfant"))
+        search.setData("adult", CInt(Request.Form("adult")))
+        search.setData("children", CInt(Request.Form("children")))
+        search.setData("enfant", CInt(Request.Form("enfant")))
         search.setData("request_datetime", "NOW()")
-        search.insert()
+        Try
+            search.insert()
+        Catch ex As MySqlException
+
+        End Try
+
 
     End Sub
+    Public Function getReqestId() As String
+        Return search.getData("id")
+    End Function
 End Class

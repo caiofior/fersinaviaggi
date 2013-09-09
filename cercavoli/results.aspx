@@ -16,4 +16,5 @@
 <h2>Elenco dei voli</h2>
 <fc:Results id="ResultsTable" runat="server" />
 </div>
+<script type="text/javascript"> var request_id = parseInt("<%=getReqestId()%>");</script>
 </asp:Content>
