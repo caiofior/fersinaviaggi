@@ -69,6 +69,10 @@ Public Class CercaVoliXhr : Implements IHttpHandler
                 
                 json = json & " ]"
                 context.Response.Write(json)
+            Case "background_search"
+                Dim json As String = "[ ]"
+                context.Response.ContentType = "application/json"
+                context.Response.Write(json)
         End Select
         
         

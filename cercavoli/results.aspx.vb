@@ -58,6 +58,18 @@ Partial Class Results
 
         End Try
 
+        If (search.getData("id") <> "") Then
+            Dim process As System.Diagnostics.Process = New System.Diagnostics.Process()
+            process.StartInfo.FileName = System.Web.HttpContext.Current.Server.MapPath("..\Bin\FlyBackGroundSearch.exe")
+            process.StartInfo.Arguments = search.getData("id")
+            process.StartInfo.WorkingDirectory = System.Web.HttpContext.Current.Server.MapPath("..\Bin")
+            process.StartInfo.RedirectStandardOutput = True
+            process.StartInfo.RedirectStandardError = True
+            process.StartInfo.CreateNoWindow = True
+            process.StartInfo.UseShellExecute = False
+            process.StartInfo.WindowStyle = System.Diagnostics.ProcessWindowStyle.Hidden
+            process.Start()
+        End If
 
     End Sub
     Public Function getReqestId() As String

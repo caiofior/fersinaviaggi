@@ -82,3 +82,6 @@
 <img class="main_image" alt="Vola con noi" title="Vola con noi" src="images/fly.jpg" width="700" height="242"/>
 </div>
 </asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="Scripts" Runat="Server">
+<script type="text/javascript" src="js/default.js?id=1"></script>
+</asp:Content>

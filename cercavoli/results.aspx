@@ -18,3 +18,6 @@
 </div>
 <script type="text/javascript"> var request_id = parseInt("<%=getReqestId()%>");</script>
 </asp:Content>
+<asp:Content ID="Content1" ContentPlaceHolderID="Scripts" Runat="Server">
+<script type="text/javascript" src="js/results.js?id=1"></script>
+</asp:Content>
