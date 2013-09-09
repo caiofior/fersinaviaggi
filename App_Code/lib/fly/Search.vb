@@ -9,6 +9,16 @@ Namespace Libray.Fly
             MyBase.New(connection)
             _tablename = "fly_search"
         End Sub
+
+        Sub loadFromId(ByVal id As Integer)
+            Dim sql As String = "SELECT * FROM " + _tablename + " WHERE id = """ + Util.sqlSanitize(id) + """"
+            Try
+                loadFromSql(sql)
+            Catch ex As Exception
+            End Try
+
+        End Sub
+
     End Class
 End Namespace
 
